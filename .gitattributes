@@ -1,0 +1,5 @@
+# Keep data and results byte-exact on every platform (published SHA-256 checksums)
+data/** -text
+results/** -text
+*.py text eol=lf
+*.md text eol=lf
