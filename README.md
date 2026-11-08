@@ -2,9 +2,9 @@
 
 **Measuring tokens per task across reasoning settings, model size and agentic tool use**
 
-Kalun Ho · November 2026 · [Technical report](paper/technical_report.md) · [Full results](results/RESULTS.md)
+Kalun Ho · November 2026 · [Website](https://kalunho.com/experiments/tokens-per-task/) · [Video](https://www.youtube.com/watch?v=VIDEO_ID) · [Technical report](paper/technical_report.md) · [Full results](results/RESULTS.md)
 
-<!-- Video: add the YouTube link here -->
+<!-- TODO: replace VIDEO_ID above with the YouTube video ID -->
 
 > AI tokens got ~280× cheaper in two years [Stanford AI Index 2025], so why do AI bills go up?
 > A bill is *price per token × tokens per task × tasks*. This repository measures the middle term
@@ -106,6 +106,6 @@ These are open models in quantised builds, so the **multipliers** transfer and t
 
 ## Licence
 
-Code: MIT ([LICENSE](LICENSE)). Results, figures and report: CC BY 4.0.
+Code: MIT ([LICENSE](LICENSE)). Results (`results/`), figures (`figures/`), report (`paper/`) and the generated T3 ledger (`data/generated/`): CC BY 4.0 ([LICENSE-CC-BY-4.0](LICENSE-CC-BY-4.0)).
 
 **Datasets.** This study uses [Banking77](https://github.com/PolyAI-LDN/task-specific-datasets) (Casanueva et al., 2020; CC BY 4.0), [GSM8K](https://github.com/openai/grade-school-math) (Cobbe et al., 2021; MIT) and [MATH-500](https://github.com/openai/prm800k) (Lightman et al., 2024, a subset of MATH by Hendrycks et al., 2021; MIT). Unmodified copies are redistributed in `data/raw/` under their original licences. See [THIRD_PARTY_NOTICES](data/raw/THIRD_PARTY_NOTICES.md) and [data/README.md](data/README.md) for full references.
