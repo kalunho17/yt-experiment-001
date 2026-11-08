@@ -1,0 +1,13 @@
+timestamp,profile,model,config,run,prompt_tokens,completion_tokens,reasoning_chars,ttft_s,total_s,decode_tok_s,end_to_end_tok_s,finish_reason
+2026-11-08T18:08:34+00:00,text,qwen3.8-27b-nvfp4,Q-off,1,48,545,0,0.175,26.992,20.3,20.2,stop
+2026-11-08T18:09:01+00:00,text,qwen3.8-27b-nvfp4,Q-off,2,48,545,0,0.153,27.016,20.3,20.2,stop
+2026-11-08T18:09:28+00:00,text,qwen3.8-27b-nvfp4,Q-off,3,48,545,0,0.145,27.044,20.2,20.2,stop
+2026-11-08T20:09:29+00:00,text-qwen35-4b,qwen3.5-4b,S,1,48,607,0,0.137,3.99,157.3,152.1,stop
+2026-11-08T20:09:33+00:00,text-qwen35-4b,qwen3.5-4b,S,2,48,607,0,0.042,3.9,157.1,155.7,stop
+2026-11-08T20:09:37+00:00,text-qwen35-4b,qwen3.5-4b,S,3,48,607,0,0.038,3.899,157.0,155.7,stop
+2026-11-08T20:44:22+00:00,text-gemma4,gemma4-31b-qat-w4a16,G-off,1,49,425,0,0.068,6.012,71.3,70.7,stop
+2026-11-08T20:44:28+00:00,text-gemma4,gemma4-31b-qat-w4a16,G-off,2,49,425,0,0.046,5.991,71.3,70.9,stop
+2026-11-08T20:44:34+00:00,text-gemma4,gemma4-31b-qat-w4a16,G-off,3,49,425,0,0.042,5.988,71.3,71.0,stop
+2026-11-08T21:16:57+00:00,text-gptoss,gpt-oss-20b,O-low,1,100,602,179,0.066,2.161,286.9,278.6,stop
+2026-11-08T21:16:59+00:00,text-gptoss,gpt-oss-20b,O-low,2,100,673,179,0.043,2.389,286.5,281.7,stop
+2026-11-08T21:17:02+00:00,text-gptoss,gpt-oss-20b,O-low,3,100,673,179,0.043,2.39,286.3,281.6,stop

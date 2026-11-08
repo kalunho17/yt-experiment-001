@@ -1,0 +1,406 @@
+PLAN: profiles text-gptoss; smoke 5 items per task; then full runs; results in <repo>/results
+
+==============================================================================
+PROFILE text-gptoss: openai/gpt-oss-20b (see root in setup.md)  configs O-low, O-high
+==============================================================================
+
+GPU host gpu-host (NVIDIA GeForce RTX 5090): active profile text-gptoss, phase ready
+  profile text-gptoss is already up
+  vLLM answers at http://<gpu-host>:8100/v1 after 0 s
+  warm-up request: 0.1 s (not recorded)
+  setup.md already has a section for gpt-oss-20b
+
+Server http://<gpu-host>:8100/v1  model gpt-oss-20b  context 32768  max_tokens 28000  seed 42  concurrency 8  smoke 5 items/task
+Results -> <repo>/results/smoke/text-gptoss
+
+== O-low / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== O-low / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== O-low / T4 hard maths (MATH-500 level 5): 5 items, 5 already done, 0 to run
+
+== O-high / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== O-high / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== O-high / T4 hard maths (MATH-500 level 5): 5 items, 5 already done, 0 to run
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+O-low     T1     42    5  1.00       543         543           19    1.0   0.00        0.2          543
+O-low     T2     42    5  0.80       237         234           61    1.0   0.00        0.5          296
+O-low     T4     42    5  1.00       783         912          266    1.0   0.00        3.6          783
+O-high    T1     42    5  1.00       665         658          141    1.0   0.00        0.9          665
+O-high    T2     42    5  0.80       670         476          488    1.0   0.00        2.7          838
+O-high    T4     42    5  1.00      3417        3887         2969    1.0   0.00       19.6         3417
+
+Sanity checks passed (reasoning on/off as expected, tool calls present where needed).
+
+Smoke test of text-gptoss passed.
+  speed probe for gpt-oss-20b already recorded (3 runs)
+
+Server http://<gpu-host>:8100/v1  model gpt-oss-20b  context 32768  max_tokens 28000  seed 42  concurrency 8  full run
+Results -> <repo>/results
+
+== O-low / T1 classify (Banking77): 100 items, 100 already done, 0 to run
+
+== O-low / T2 calculate (GSM8K): 100 items, 100 already done, 0 to run
+
+== O-low / T4 hard maths (MATH-500 level 5): 50 items, 0 already done, 50 to run
+  [O-low T4] 1/50  math-238  OK    tokens    579  calls 1    | acc 1.00  mean tokens 579  truncated 0  3s
+  [O-low T4] 2/50  math-251  OK    tokens    750  calls 1    | acc 1.00  mean tokens 664  truncated 0  4s
+  [O-low T4] 3/50  math-142  OK    tokens    744  calls 1    | acc 1.00  mean tokens 691  truncated 0  4s
+  [O-low T4] 4/50  math-024  OK    tokens    791  calls 1  no_answer_line  | acc 1.00  mean tokens 716  truncated 0  4s
+  [O-low T4] 5/50  math-197  OK    tokens    945  calls 1  no_answer_line  | acc 1.00  mean tokens 762  truncated 0  5s
+  [O-low T4] 6/50  math-118  OK    tokens    912  calls 1    | acc 1.00  mean tokens 787  truncated 0  5s
+  [O-low T4] 7/50  math-047  OK    tokens    419  calls 1    | acc 1.00  mean tokens 734  truncated 0  6s
+  [O-low T4] 8/50  math-493  OK    tokens    659  calls 1    | acc 1.00  mean tokens 725  truncated 0  7s
+  [O-low T4] 9/50  math-390  OK    tokens    911  calls 1    | acc 1.00  mean tokens 746  truncated 0  8s
+  [O-low T4] 10/50  math-101  OK    tokens   1765  calls 1  no_answer_line  | acc 1.00  mean tokens 848  truncated 0  10s
+  [O-low T4] 11/50  math-012  OK    tokens    573  calls 1    | acc 1.00  mean tokens 823  truncated 0  10s
+  [O-low T4] 12/50  math-276  OK    tokens    736  calls 1    | acc 1.00  mean tokens 815  truncated 0  11s
+  [O-low T4] 13/50  math-026  OK    tokens   1371  calls 1    | acc 1.00  mean tokens 858  truncated 0  12s
+  [O-low T4] 14/50  math-491  FAIL  tokens    580  calls 1    | acc 0.93  mean tokens 838  truncated 0  12s
+  [O-low T4] 15/50  math-088  OK    tokens   2217  calls 1    | acc 0.93  mean tokens 930  truncated 0  13s
+  [O-low T4] 16/50  math-498  OK    tokens   1504  calls 1    | acc 0.94  mean tokens 966  truncated 0  14s
+  [O-low T4] 17/50  math-475  FAIL  tokens   1648  calls 1    | acc 0.88  mean tokens 1006  truncated 0  14s
+  [O-low T4] 18/50  math-321  OK    tokens    497  calls 1    | acc 0.89  mean tokens 978  truncated 0  14s
+  [O-low T4] 19/50  math-424  OK    tokens    411  calls 1    | acc 0.89  mean tokens 948  truncated 0  16s
+  [O-low T4] 20/50  math-244  OK    tokens    666  calls 1    | acc 0.90  mean tokens 934  truncated 0  17s
+  [O-low T4] 21/50  math-482  OK    tokens    678  calls 1    | acc 0.90  mean tokens 922  truncated 0  18s
+  [O-low T4] 22/50  math-254  OK    tokens    453  calls 1    | acc 0.91  mean tokens 900  truncated 0  18s
+  [O-low T4] 23/50  math-188  OK    tokens    995  calls 1    | acc 0.91  mean tokens 905  truncated 0  19s
+  [O-low T4] 24/50  math-479  OK    tokens    472  calls 1    | acc 0.92  mean tokens 886  truncated 0  19s
+  [O-low T4] 25/50  math-151  OK    tokens    743  calls 1    | acc 0.92  mean tokens 881  truncated 0  22s
+  [O-low T4] 26/50  math-303  OK    tokens   2339  calls 1  no_answer_line  | acc 0.92  mean tokens 937  truncated 0  26s
+  [O-low T4] 27/50  math-239  FAIL  tokens   3275  calls 1    | acc 0.89  mean tokens 1023  truncated 0  26s
+  [O-low T4] 28/50  math-094  FAIL  tokens   2932  calls 1    | acc 0.86  mean tokens 1092  truncated 0  27s
+  [O-low T4] 29/50  math-328  OK    tokens   1034  calls 1    | acc 0.86  mean tokens 1090  truncated 0  28s
+  [O-low T4] 30/50  math-327  OK    tokens   2769  calls 1  no_answer_line  | acc 0.87  mean tokens 1146  truncated 0  28s
+  [O-low T4] 31/50  math-189  FAIL  tokens   2370  calls 1  no_answer_line  | acc 0.84  mean tokens 1185  truncated 0  31s
+  [O-low T4] 32/50  math-434  OK    tokens    505  calls 1    | acc 0.84  mean tokens 1164  truncated 0  31s
+  [O-low T4] 33/50  math-330  FAIL  tokens    415  calls 1    | acc 0.82  mean tokens 1141  truncated 0  33s
+  [O-low T4] 34/50  math-050  OK    tokens    898  calls 1    | acc 0.82  mean tokens 1134  truncated 0  33s
+  [O-low T4] 35/50  math-009  FAIL  tokens   2531  calls 1    | acc 0.80  mean tokens 1174  truncated 0  33s
+  [O-low T4] 36/50  math-063  OK    tokens   1472  calls 1    | acc 0.81  mean tokens 1182  truncated 0  34s
+  [O-low T4] 37/50  math-432  OK    tokens   1683  calls 1    | acc 0.81  mean tokens 1196  truncated 0  36s
+  [O-low T4] 38/50  math-241  OK    tokens    710  calls 1    | acc 0.82  mean tokens 1183  truncated 0  36s
+  [O-low T4] 39/50  math-417  OK    tokens    340  calls 1    | acc 0.82  mean tokens 1161  truncated 0  37s
+  [O-low T4] 40/50  math-080  OK    tokens   3275  calls 1    | acc 0.82  mean tokens 1214  truncated 0  39s
+  [O-low T4] 41/50  math-306  FAIL  tokens   1990  calls 1    | acc 0.80  mean tokens 1233  truncated 0  39s
+  [O-low T4] 42/50  math-173  OK    tokens    899  calls 1    | acc 0.81  mean tokens 1225  truncated 0  39s
+  [O-low T4] 43/50  math-170  OK    tokens   1568  calls 1  no_answer_line  | acc 0.81  mean tokens 1233  truncated 0  40s
+  [O-low T4] 44/50  math-357  OK    tokens    638  calls 1    | acc 0.82  mean tokens 1220  truncated 0  40s
+  [O-low T4] 45/50  math-385  OK    tokens    410  calls 1    | acc 0.82  mean tokens 1202  truncated 0  40s
+  [O-low T4] 46/50  math-152  OK    tokens   1534  calls 1    | acc 0.83  mean tokens 1209  truncated 0  42s
+  [O-low T4] 47/50  math-448  OK    tokens    680  calls 1    | acc 0.83  mean tokens 1198  truncated 0  42s
+  [O-low T4] 48/50  math-136  OK    tokens   1774  calls 1  no_answer_line  | acc 0.83  mean tokens 1210  truncated 0  43s
+  [O-low T4] 49/50  math-168  OK    tokens   1979  calls 1    | acc 0.84  mean tokens 1225  truncated 0  44s
+  [O-low T4] 50/50  math-391  OK    tokens   1145  calls 1    | acc 0.84  mean tokens 1224  truncated 0  45s
+
+== O-high / T1 classify (Banking77): 100 items, 0 already done, 100 to run
+  [O-high T1] 1/100  b77-0571  OK    tokens    638  calls 1    | acc 1.00  mean tokens 638  truncated 0  1s
+  [O-high T1] 2/100  b77-0102  OK    tokens    641  calls 1    | acc 1.00  mean tokens 640  truncated 0  1s
+  [O-high T1] 3/100  b77-3037  OK    tokens    656  calls 1    | acc 1.00  mean tokens 645  truncated 0  1s
+  [O-high T1] 4/100  b77-2619  OK    tokens    697  calls 1    | acc 1.00  mean tokens 658  truncated 0  1s
+  [O-high T1] 5/100  b77-0456  OK    tokens    711  calls 1    | acc 1.00  mean tokens 669  truncated 0  1s
+  [O-high T1] 6/100  b77-1003  OK    tokens    755  calls 1    | acc 1.00  mean tokens 683  truncated 0  2s
+  [O-high T1] 7/100  b77-2771  OK    tokens    620  calls 1    | acc 1.00  mean tokens 674  truncated 0  2s
+  [O-high T1] 8/100  b77-3016  OK    tokens    726  calls 1    | acc 1.00  mean tokens 680  truncated 0  2s
+  [O-high T1] 9/100  b77-2418  OK    tokens    656  calls 1    | acc 1.00  mean tokens 678  truncated 0  3s
+  [O-high T1] 10/100  b77-0356  OK    tokens    680  calls 1    | acc 1.00  mean tokens 678  truncated 0  3s
+  [O-high T1] 11/100  b77-0122  OK    tokens    653  calls 1    | acc 1.00  mean tokens 676  truncated 0  4s
+  [O-high T1] 12/100  b77-1728  OK    tokens    823  calls 1    | acc 1.00  mean tokens 688  truncated 0  4s
+  [O-high T1] 13/100  b77-0419  OK    tokens   1035  calls 1    | acc 1.00  mean tokens 715  truncated 0  5s
+  [O-high T1] 14/100  b77-1126  OK    tokens   1189  calls 1    | acc 1.00  mean tokens 749  truncated 0  5s
+  [O-high T1] 15/100  b77-0952  FAIL  tokens    620  calls 1    | acc 0.93  mean tokens 740  truncated 0  5s
+  [O-high T1] 16/100  b77-0914  OK    tokens   1338  calls 1    | acc 0.94  mean tokens 777  truncated 0  6s
+  [O-high T1] 17/100  b77-2465  OK    tokens    645  calls 1    | acc 0.94  mean tokens 770  truncated 0  6s
+  [O-high T1] 18/100  b77-0895  OK    tokens    783  calls 1    | acc 0.94  mean tokens 770  truncated 0  6s
+  [O-high T1] 19/100  b77-2069  OK    tokens    762  calls 1    | acc 0.95  mean tokens 770  truncated 0  6s
+  [O-high T1] 20/100  b77-3033  OK    tokens   1311  calls 1    | acc 0.95  mean tokens 797  truncated 0  7s
+  [O-high T1] 21/100  b77-0108  OK    tokens    670  calls 1    | acc 0.95  mean tokens 791  truncated 0  7s
+  [O-high T1] 22/100  b77-0130  OK    tokens   1218  calls 1    | acc 0.95  mean tokens 810  truncated 0  8s
+  [O-high T1] 23/100  b77-0383  OK    tokens   1089  calls 1    | acc 0.96  mean tokens 822  truncated 0  8s
+  [O-high T1] 24/100  b77-2932  OK    tokens    738  calls 1    | acc 0.96  mean tokens 819  truncated 0  8s
+  [O-high T1] 25/100  b77-0814  OK    tokens    754  calls 1    | acc 0.96  mean tokens 816  truncated 0  8s
+  [O-high T1] 26/100  b77-2232  OK    tokens    601  calls 1    | acc 0.96  mean tokens 808  truncated 0  8s
+  [O-high T1] 27/100  b77-1718  OK    tokens    657  calls 1    | acc 0.96  mean tokens 802  truncated 0  9s
+  [O-high T1] 28/100  b77-2872  OK    tokens    899  calls 1    | acc 0.96  mean tokens 806  truncated 0  9s
+  [O-high T1] 29/100  b77-1839  OK    tokens    782  calls 1    | acc 0.97  mean tokens 805  truncated 0  10s
+  [O-high T1] 30/100  b77-1139  OK    tokens    694  calls 1    | acc 0.97  mean tokens 801  truncated 0  10s
+  [O-high T1] 31/100  b77-0902  OK    tokens    894  calls 1    | acc 0.97  mean tokens 804  truncated 0  11s
+  [O-high T1] 32/100  b77-0653  OK    tokens    701  calls 1    | acc 0.97  mean tokens 801  truncated 0  11s
+  [O-high T1] 33/100  b77-2859  OK    tokens    657  calls 1    | acc 0.97  mean tokens 797  truncated 0  11s
+  [O-high T1] 34/100  b77-1393  OK    tokens    597  calls 1    | acc 0.97  mean tokens 791  truncated 0  12s
+  [O-high T1] 35/100  b77-1138  OK    tokens    651  calls 1    | acc 0.97  mean tokens 787  truncated 0  12s
+  [O-high T1] 36/100  b77-1731  OK    tokens    782  calls 1    | acc 0.97  mean tokens 787  truncated 0  12s
+  [O-high T1] 37/100  b77-2233  FAIL  tokens   2169  calls 1    | acc 0.95  mean tokens 824  truncated 0  13s
+  [O-high T1] 38/100  b77-1378  OK    tokens    633  calls 1    | acc 0.95  mean tokens 819  truncated 0  13s
+  [O-high T1] 39/100  b77-2661  OK    tokens   1450  calls 1    | acc 0.95  mean tokens 835  truncated 0  13s
+  [O-high T1] 40/100  b77-0026  FAIL  tokens   1079  calls 1    | acc 0.93  mean tokens 841  truncated 0  13s
+  [O-high T1] 41/100  b77-0396  OK    tokens    806  calls 1    | acc 0.93  mean tokens 840  truncated 0  15s
+  [O-high T1] 42/100  b77-0418  OK    tokens   1003  calls 1    | acc 0.93  mean tokens 844  truncated 0  16s
+  [O-high T1] 43/100  b77-0379  OK    tokens    961  calls 1    | acc 0.93  mean tokens 847  truncated 0  16s
+  [O-high T1] 44/100  b77-0881  FAIL  tokens   1206  calls 1    | acc 0.91  mean tokens 855  truncated 0  17s
+  [O-high T1] 45/100  b77-1556  OK    tokens   1151  calls 1    | acc 0.91  mean tokens 862  truncated 0  18s
+  [O-high T1] 46/100  b77-2472  OK    tokens    704  calls 1    | acc 0.91  mean tokens 858  truncated 0  18s
+  [O-high T1] 47/100  b77-1408  OK    tokens    776  calls 1    | acc 0.91  mean tokens 857  truncated 0  18s
+  [O-high T1] 48/100  b77-1470  OK    tokens    923  calls 1    | acc 0.92  mean tokens 858  truncated 0  18s
+  [O-high T1] 49/100  b77-1083  OK    tokens    804  calls 1    | acc 0.92  mean tokens 857  truncated 0  19s
+  [O-high T1] 50/100  b77-1881  OK    tokens    699  calls 1    | acc 0.92  mean tokens 854  truncated 0  19s
+  [O-high T1] 51/100  b77-0636  FAIL  tokens   1637  calls 1    | acc 0.90  mean tokens 869  truncated 0  19s
+  [O-high T1] 52/100  b77-0511  OK    tokens    571  calls 1    | acc 0.90  mean tokens 863  truncated 0  19s
+  [O-high T1] 53/100  b77-1550  OK    tokens    645  calls 1    | acc 0.91  mean tokens 859  truncated 0  20s
+  [O-high T1] 54/100  b77-0322  OK    tokens    661  calls 1    | acc 0.91  mean tokens 856  truncated 0  20s
+  [O-high T1] 55/100  b77-0177  OK    tokens    973  calls 1    | acc 0.91  mean tokens 858  truncated 0  21s
+  [O-high T1] 56/100  b77-2988  FAIL  tokens   1059  calls 1    | acc 0.89  mean tokens 861  truncated 0  21s
+  [O-high T1] 57/100  b77-1200  OK    tokens    719  calls 1    | acc 0.89  mean tokens 859  truncated 0  22s
+  [O-high T1] 58/100  b77-2413  OK    tokens   2523  calls 1    | acc 0.90  mean tokens 888  truncated 0  22s
+  [O-high T1] 59/100  b77-2574  OK    tokens    760  calls 1    | acc 0.90  mean tokens 885  truncated 0  22s
+  [O-high T1] 60/100  b77-2533  OK    tokens    782  calls 1    | acc 0.90  mean tokens 884  truncated 0  23s
+  [O-high T1] 61/100  b77-2298  FAIL  tokens   3049  calls 1    | acc 0.89  mean tokens 919  truncated 0  23s
+  [O-high T1] 62/100  b77-2885  OK    tokens    747  calls 1    | acc 0.89  mean tokens 916  truncated 0  24s
+  [O-high T1] 63/100  b77-0187  OK    tokens    591  calls 1    | acc 0.89  mean tokens 911  truncated 0  24s
+  [O-high T1] 64/100  b77-0284  OK    tokens    700  calls 1    | acc 0.89  mean tokens 908  truncated 0  24s
+  [O-high T1] 65/100  b77-0787  OK    tokens    819  calls 1    | acc 0.89  mean tokens 907  truncated 0  24s
+  [O-high T1] 66/100  b77-2364  FAIL  tokens    877  calls 1    | acc 0.88  mean tokens 906  truncated 0  24s
+  [O-high T1] 67/100  b77-0326  OK    tokens    567  calls 1    | acc 0.88  mean tokens 901  truncated 0  24s
+  [O-high T1] 68/100  b77-2261  OK    tokens   1278  calls 1    | acc 0.88  mean tokens 907  truncated 0  25s
+  [O-high T1] 69/100  b77-1185  OK    tokens    632  calls 1    | acc 0.88  mean tokens 903  truncated 0  25s
+  [O-high T1] 70/100  b77-2196  FAIL  tokens   1589  calls 1    | acc 0.87  mean tokens 912  truncated 0  26s
+  [O-high T1] 71/100  b77-2603  OK    tokens    634  calls 1    | acc 0.87  mean tokens 908  truncated 0  26s
+  [O-high T1] 72/100  b77-1481  OK    tokens   1189  calls 1    | acc 0.88  mean tokens 912  truncated 0  26s
+  [O-high T1] 73/100  b77-2708  FAIL  tokens    868  calls 1    | acc 0.86  mean tokens 912  truncated 0  26s
+  [O-high T1] 74/100  b77-1494  OK    tokens    764  calls 1    | acc 0.86  mean tokens 910  truncated 0  27s
+  [O-high T1] 75/100  b77-1455  OK    tokens    824  calls 1    | acc 0.87  mean tokens 909  truncated 0  28s
+  [O-high T1] 76/100  b77-0933  OK    tokens   1169  calls 1    | acc 0.87  mean tokens 912  truncated 0  28s
+  [O-high T1] 77/100  b77-0953  OK    tokens   1212  calls 1    | acc 0.87  mean tokens 916  truncated 0  29s
+  [O-high T1] 78/100  b77-2745  FAIL  tokens    693  calls 1    | acc 0.86  mean tokens 913  truncated 0  29s
+  [O-high T1] 79/100  b77-2874  OK    tokens    582  calls 1    | acc 0.86  mean tokens 909  truncated 0  29s
+  [O-high T1] 80/100  b77-0413  OK    tokens   1241  calls 1    | acc 0.86  mean tokens 913  truncated 0  30s
+  [O-high T1] 81/100  b77-1857  FAIL  tokens   1243  calls 1    | acc 0.85  mean tokens 917  truncated 0  30s
+  [O-high T1] 82/100  b77-2799  OK    tokens    609  calls 1    | acc 0.85  mean tokens 913  truncated 0  30s
+  [O-high T1] 83/100  b77-0858  OK    tokens    951  calls 1    | acc 0.86  mean tokens 914  truncated 0  30s
+  [O-high T1] 84/100  b77-2654  OK    tokens    802  calls 1    | acc 0.86  mean tokens 912  truncated 0  31s
+  [O-high T1] 85/100  b77-1516  FAIL  tokens   1340  calls 1    | acc 0.85  mean tokens 917  truncated 0  32s
+  [O-high T1] 86/100  b77-0700  OK    tokens    766  calls 1    | acc 0.85  mean tokens 916  truncated 0  32s
+  [O-high T1] 87/100  b77-2600  OK    tokens    870  calls 1    | acc 0.85  mean tokens 915  truncated 0  32s
+  [O-high T1] 88/100  b77-1093  OK    tokens   1253  calls 1    | acc 0.85  mean tokens 919  truncated 0  33s
+  [O-high T1] 89/100  b77-1002  OK    tokens    763  calls 1    | acc 0.85  mean tokens 917  truncated 0  34s
+  [O-high T1] 90/100  b77-0669  OK    tokens    702  calls 1    | acc 0.86  mean tokens 915  truncated 0  34s
+  [O-high T1] 91/100  b77-1893  OK    tokens    625  calls 1    | acc 0.86  mean tokens 912  truncated 0  34s
+  [O-high T1] 92/100  b77-1554  OK    tokens    687  calls 1    | acc 0.86  mean tokens 909  truncated 0  35s
+  [O-high T1] 93/100  b77-2495  FAIL  tokens   1325  calls 1    | acc 0.85  mean tokens 914  truncated 0  35s
+  [O-high T1] 94/100  b77-0666  FAIL  tokens   2017  calls 1    | acc 0.84  mean tokens 925  truncated 0  36s
+  [O-high T1] 95/100  b77-0292  OK    tokens   1611  calls 1    | acc 0.84  mean tokens 933  truncated 0  37s
+  [O-high T1] 96/100  b77-2818  OK    tokens    857  calls 1    | acc 0.84  mean tokens 932  truncated 0  37s
+  [O-high T1] 97/100  b77-2187  FAIL  tokens   1574  calls 1    | acc 0.84  mean tokens 939  truncated 0  38s
+  [O-high T1] 98/100  b77-2621  OK    tokens   1897  calls 1    | acc 0.84  mean tokens 948  truncated 0  43s
+  [O-high T1] 99/100  b77-2986  OK    tokens   2528  calls 1    | acc 0.84  mean tokens 964  truncated 0  44s
+  [O-high T1] 100/100  b77-1105  OK    tokens   2426  calls 1    | acc 0.84  mean tokens 979  truncated 0  44s
+
+== O-high / T2 calculate (GSM8K): 100 items, 0 already done, 100 to run
+  [O-high T2] 1/100  gsm-1309  FAIL  tokens    320  calls 1    | acc 0.00  mean tokens 320  truncated 0  1s
+  [O-high T2] 2/100  gsm-0285  OK    tokens    302  calls 1    | acc 0.50  mean tokens 311  truncated 0  1s
+  [O-high T2] 3/100  gsm-0501  OK    tokens    426  calls 1    | acc 0.67  mean tokens 349  truncated 0  2s
+  [O-high T2] 4/100  gsm-1116  OK    tokens    256  calls 1    | acc 0.75  mean tokens 326  truncated 0  2s
+  [O-high T2] 5/100  gsm-0228  OK    tokens    476  calls 1    | acc 0.80  mean tokens 356  truncated 0  2s
+  [O-high T2] 6/100  gsm-0178  OK    tokens    398  calls 1    | acc 0.83  mean tokens 363  truncated 0  3s
+  [O-high T2] 7/100  gsm-0051  OK    tokens    689  calls 1    | acc 0.86  mean tokens 410  truncated 0  4s
+  [O-high T2] 8/100  gsm-0864  OK    tokens    437  calls 1    | acc 0.88  mean tokens 413  truncated 0  4s
+  [O-high T2] 9/100  gsm-1209  OK    tokens    623  calls 1    | acc 0.89  mean tokens 436  truncated 0  4s
+  [O-high T2] 10/100  gsm-0209  FAIL  tokens    829  calls 1    | acc 0.80  mean tokens 476  truncated 0  5s
+  [O-high T2] 11/100  gsm-0061  OK    tokens    424  calls 1    | acc 0.82  mean tokens 471  truncated 0  5s
+  [O-high T2] 12/100  gsm-0447  OK    tokens    286  calls 1    | acc 0.83  mean tokens 456  truncated 0  5s
+  [O-high T2] 13/100  gsm-0563  OK    tokens    901  calls 1    | acc 0.85  mean tokens 490  truncated 0  5s
+  [O-high T2] 14/100  gsm-0191  OK    tokens    363  calls 1    | acc 0.86  mean tokens 481  truncated 0  5s
+  [O-high T2] 15/100  gsm-1034  OK    tokens    268  calls 1    | acc 0.87  mean tokens 467  truncated 0  6s
+  [O-high T2] 16/100  gsm-0476  OK    tokens    346  calls 1    | acc 0.88  mean tokens 459  truncated 0  6s
+  [O-high T2] 17/100  gsm-1232  OK    tokens    267  calls 1    | acc 0.88  mean tokens 448  truncated 0  6s
+  [O-high T2] 18/100  gsm-0065  OK    tokens    752  calls 1    | acc 0.89  mean tokens 465  truncated 0  6s
+  [O-high T2] 19/100  gsm-0919  OK    tokens    334  calls 1    | acc 0.89  mean tokens 458  truncated 0  7s
+  [O-high T2] 20/100  gsm-0451  OK    tokens    390  calls 1    | acc 0.90  mean tokens 454  truncated 0  8s
+  [O-high T2] 21/100  gsm-0569  OK    tokens    274  calls 1    | acc 0.90  mean tokens 446  truncated 0  8s
+  [O-high T2] 22/100  gsm-1206  OK    tokens    545  calls 1    | acc 0.91  mean tokens 450  truncated 0  9s
+  [O-high T2] 23/100  gsm-0054  OK    tokens    826  calls 1    | acc 0.91  mean tokens 467  truncated 0  10s
+  [O-high T2] 24/100  gsm-1149  OK    tokens    816  calls 1    | acc 0.92  mean tokens 481  truncated 0  10s
+  [O-high T2] 25/100  gsm-0407  OK    tokens    888  calls 1    | acc 0.92  mean tokens 497  truncated 0  10s
+  [O-high T2] 26/100  gsm-0859  OK    tokens    794  calls 1    | acc 0.92  mean tokens 509  truncated 0  10s
+  [O-high T2] 27/100  gsm-0865  OK    tokens    328  calls 1    | acc 0.93  mean tokens 502  truncated 0  10s
+  [O-high T2] 28/100  gsm-0318  OK    tokens    398  calls 1    | acc 0.93  mean tokens 498  truncated 0  12s
+  [O-high T2] 29/100  gsm-0689  OK    tokens    508  calls 1    | acc 0.93  mean tokens 499  truncated 0  13s
+  [O-high T2] 30/100  gsm-0326  OK    tokens    960  calls 1    | acc 0.93  mean tokens 514  truncated 0  13s
+  [O-high T2] 31/100  gsm-0440  OK    tokens    580  calls 1    | acc 0.94  mean tokens 516  truncated 0  13s
+  [O-high T2] 32/100  gsm-0189  OK    tokens    683  calls 1    | acc 0.94  mean tokens 521  truncated 0  14s
+  [O-high T2] 33/100  gsm-0013  OK    tokens   1083  calls 1    | acc 0.94  mean tokens 538  truncated 0  14s
+  [O-high T2] 34/100  gsm-0704  OK    tokens    232  calls 1    | acc 0.94  mean tokens 529  truncated 0  14s
+  [O-high T2] 35/100  gsm-0778  OK    tokens    573  calls 1    | acc 0.94  mean tokens 531  truncated 0  15s
+  [O-high T2] 36/100  gsm-0088  OK    tokens    284  calls 1    | acc 0.94  mean tokens 524  truncated 0  15s
+  [O-high T2] 37/100  gsm-0696  OK    tokens   1142  calls 1    | acc 0.95  mean tokens 541  truncated 0  16s
+  [O-high T2] 38/100  gsm-1098  OK    tokens    294  calls 1    | acc 0.95  mean tokens 534  truncated 0  16s
+  [O-high T2] 39/100  gsm-0775  OK    tokens    268  calls 1    | acc 0.95  mean tokens 527  truncated 0  17s
+  [O-high T2] 40/100  gsm-1236  OK    tokens    681  calls 1    | acc 0.95  mean tokens 531  truncated 0  18s
+  [O-high T2] 41/100  gsm-0735  OK    tokens    829  calls 1    | acc 0.95  mean tokens 538  truncated 0  18s
+  [O-high T2] 42/100  gsm-0541  OK    tokens    842  calls 1    | acc 0.95  mean tokens 546  truncated 0  19s
+  [O-high T2] 43/100  gsm-0161  OK    tokens    565  calls 1    | acc 0.95  mean tokens 546  truncated 0  20s
+  [O-high T2] 44/100  gsm-1287  OK    tokens    336  calls 1    | acc 0.95  mean tokens 541  truncated 0  20s
+  [O-high T2] 45/100  gsm-0198  OK    tokens   1357  calls 1    | acc 0.96  mean tokens 559  truncated 0  21s
+  [O-high T2] 46/100  gsm-0600  OK    tokens    658  calls 1    | acc 0.96  mean tokens 562  truncated 0  22s
+  [O-high T2] 47/100  gsm-1266  OK    tokens    458  calls 1    | acc 0.96  mean tokens 559  truncated 0  22s
+  [O-high T2] 48/100  gsm-0740  OK    tokens    549  calls 1    | acc 0.96  mean tokens 559  truncated 0  23s
+  [O-high T2] 49/100  gsm-0940  OK    tokens   1378  calls 1    | acc 0.96  mean tokens 576  truncated 0  23s
+  [O-high T2] 50/100  gsm-1130  OK    tokens   1008  calls 1    | acc 0.96  mean tokens 584  truncated 0  24s
+  [O-high T2] 51/100  gsm-0393  OK    tokens    427  calls 1    | acc 0.96  mean tokens 581  truncated 0  24s
+  [O-high T2] 52/100  gsm-0142  OK    tokens    414  calls 1    | acc 0.96  mean tokens 578  truncated 0  24s
+  [O-high T2] 53/100  gsm-1182  OK    tokens    720  calls 1    | acc 0.96  mean tokens 581  truncated 0  25s
+  [O-high T2] 54/100  gsm-0592  OK    tokens    574  calls 1    | acc 0.96  mean tokens 581  truncated 0  27s
+  [O-high T2] 55/100  gsm-0466  OK    tokens    681  calls 1    | acc 0.96  mean tokens 583  truncated 0  27s
+  [O-high T2] 56/100  gsm-0928  OK    tokens    612  calls 1    | acc 0.96  mean tokens 583  truncated 0  28s
+  [O-high T2] 57/100  gsm-0747  OK    tokens    628  calls 1    | acc 0.96  mean tokens 584  truncated 0  30s
+  [O-high T2] 58/100  gsm-0206  OK    tokens   1078  calls 1    | acc 0.97  mean tokens 592  truncated 0  31s
+  [O-high T2] 59/100  gsm-0163  OK    tokens   1138  calls 1    | acc 0.97  mean tokens 602  truncated 0  31s
+  [O-high T2] 60/100  gsm-1301  OK    tokens    951  calls 1    | acc 0.97  mean tokens 607  truncated 0  32s
+  [O-high T2] 61/100  gsm-0727  OK    tokens    498  calls 1    | acc 0.97  mean tokens 606  truncated 0  33s
+  [O-high T2] 62/100  gsm-0758  OK    tokens    501  calls 1    | acc 0.97  mean tokens 604  truncated 0  33s
+  [O-high T2] 63/100  gsm-0333  OK    tokens    967  calls 1    | acc 0.97  mean tokens 610  truncated 0  34s
+  [O-high T2] 64/100  gsm-0546  OK    tokens    961  calls 1    | acc 0.97  mean tokens 615  truncated 0  38s
+  [O-high T2] 65/100  gsm-1300  OK    tokens    684  calls 1    | acc 0.97  mean tokens 616  truncated 0  38s
+  [O-high T2] 66/100  gsm-0146  OK    tokens   1042  calls 1    | acc 0.97  mean tokens 623  truncated 0  39s
+  [O-high T2] 67/100  gsm-0429  OK    tokens   1375  calls 1    | acc 0.97  mean tokens 634  truncated 0  40s
+  [O-high T2] 68/100  gsm-1093  OK    tokens    386  calls 1    | acc 0.97  mean tokens 630  truncated 0  40s
+  [O-high T2] 69/100  gsm-0350  OK    tokens    432  calls 1    | acc 0.97  mean tokens 627  truncated 0  40s
+  [O-high T2] 70/100  gsm-0946  OK    tokens    321  calls 1    | acc 0.97  mean tokens 623  truncated 0  41s
+  [O-high T2] 71/100  gsm-0457  OK    tokens   6262  calls 1    | acc 0.97  mean tokens 702  truncated 0  42s
+  [O-high T2] 72/100  gsm-0334  OK    tokens    660  calls 1    | acc 0.97  mean tokens 702  truncated 0  43s
+  [O-high T2] 73/100  gsm-0449  OK    tokens    379  calls 1    | acc 0.97  mean tokens 697  truncated 0  45s
+  [O-high T2] 74/100  gsm-1247  OK    tokens   1802  calls 1    | acc 0.97  mean tokens 712  truncated 0  45s
+  [O-high T2] 75/100  gsm-0552  OK    tokens   1035  calls 1    | acc 0.97  mean tokens 717  truncated 0  46s
+  [O-high T2] 76/100  gsm-0664  OK    tokens    408  calls 1    | acc 0.97  mean tokens 713  truncated 0  46s
+  [O-high T2] 77/100  gsm-0469  OK    tokens    425  calls 1    | acc 0.97  mean tokens 709  truncated 0  48s
+  [O-high T2] 78/100  gsm-0646  OK    tokens    359  calls 1    | acc 0.97  mean tokens 704  truncated 0  48s
+  [O-high T2] 79/100  gsm-0548  OK    tokens    250  calls 1    | acc 0.97  mean tokens 699  truncated 0  49s
+  [O-high T2] 80/100  gsm-1140  OK    tokens   1056  calls 1    | acc 0.97  mean tokens 703  truncated 0  49s
+  [O-high T2] 81/100  gsm-0432  OK    tokens    454  calls 1    | acc 0.98  mean tokens 700  truncated 0  51s
+  [O-high T2] 82/100  gsm-0114  OK    tokens   1156  calls 1    | acc 0.98  mean tokens 706  truncated 0  52s
+  [O-high T2] 83/100  gsm-1310  OK    tokens   1692  calls 1    | acc 0.98  mean tokens 717  truncated 0  52s
+  [O-high T2] 84/100  gsm-0777  OK    tokens   1927  calls 1    | acc 0.98  mean tokens 732  truncated 0  52s
+  [O-high T2] 85/100  gsm-0435  OK    tokens    256  calls 1    | acc 0.98  mean tokens 726  truncated 0  53s
+  [O-high T2] 86/100  gsm-0135  OK    tokens    755  calls 1    | acc 0.98  mean tokens 727  truncated 0  53s
+  [O-high T2] 87/100  gsm-0644  OK    tokens    509  calls 1    | acc 0.98  mean tokens 724  truncated 0  54s
+  [O-high T2] 88/100  gsm-1022  OK    tokens    603  calls 1    | acc 0.98  mean tokens 723  truncated 0  55s
+  [O-high T2] 89/100  gsm-1316  OK    tokens    541  calls 1    | acc 0.98  mean tokens 721  truncated 0  56s
+  [O-high T2] 90/100  gsm-0542  OK    tokens    382  calls 1    | acc 0.98  mean tokens 717  truncated 0  58s
+  [O-high T2] 91/100  gsm-0292  OK    tokens    806  calls 1    | acc 0.98  mean tokens 718  truncated 0  60s
+  [O-high T2] 92/100  gsm-0810  OK    tokens   1219  calls 1    | acc 0.98  mean tokens 723  truncated 0  60s
+  [O-high T2] 93/100  gsm-0939  OK    tokens   1160  calls 1  no_answer_line  | acc 0.98  mean tokens 728  truncated 0  61s
+  [O-high T2] 94/100  gsm-0538  OK    tokens    802  calls 1    | acc 0.98  mean tokens 729  truncated 0  65s
+  [O-high T2] 95/100  gsm-1103  OK    tokens   1131  calls 1    | acc 0.98  mean tokens 733  truncated 0  67s
+  [O-high T2] 96/100  gsm-0093  OK    tokens   6496  calls 1    | acc 0.98  mean tokens 793  truncated 0  68s
+  [O-high T2] 97/100  gsm-0821  OK    tokens   3484  calls 1    | acc 0.98  mean tokens 821  truncated 0  71s
+  [O-high T2] 98/100  gsm-0255  OK    tokens   8639  calls 1    | acc 0.98  mean tokens 901  truncated 0  75s
+  [O-high T2] 99/100  gsm-0505  OK    tokens   4799  calls 1    | acc 0.98  mean tokens 940  truncated 0  84s
+  [O-high T2] 100/100  gsm-1161  FAIL  tokens   6409  calls 1  no_answer_line  | acc 0.97  mean tokens 995  truncated 0  87s
+
+== O-high / T4 hard maths (MATH-500 level 5): 50 items, 0 already done, 50 to run
+  [O-high T4] 1/50  math-118  OK    tokens   1835  calls 1    | acc 1.00  mean tokens 1835  truncated 0  12s
+  [O-high T4] 2/50  math-238  OK    tokens   1975  calls 1    | acc 1.00  mean tokens 1905  truncated 0  12s
+  [O-high T4] 3/50  math-197  OK    tokens   2261  calls 1  no_answer_line  | acc 1.00  mean tokens 2024  truncated 0  14s
+  [O-high T4] 4/50  math-024  OK    tokens   2689  calls 1    | acc 1.00  mean tokens 2190  truncated 0  17s
+  [O-high T4] 5/50  math-047  OK    tokens   1023  calls 1    | acc 1.00  mean tokens 1957  truncated 0  23s
+  [O-high T4] 6/50  math-390  OK    tokens   2301  calls 1    | acc 1.00  mean tokens 2014  truncated 0  26s
+  [O-high T4] 7/50  math-251  OK    tokens   4508  calls 1  no_answer_line  | acc 1.00  mean tokens 2370  truncated 0  29s
+  [O-high T4] 8/50  math-493  OK    tokens   4037  calls 1    | acc 1.00  mean tokens 2579  truncated 0  41s
+  [O-high T4] 9/50  math-276  OK    tokens   1837  calls 1    | acc 1.00  mean tokens 2496  truncated 0  53s
+  [O-high T4] 10/50  math-475  OK    tokens   5003  calls 1  no_answer_line  | acc 1.00  mean tokens 2747  truncated 0  56s
+  [O-high T4] 11/50  math-012  OK    tokens   1836  calls 1    | acc 1.00  mean tokens 2664  truncated 0  66s
+  [O-high T4] 12/50  math-101  OK    tokens  10614  calls 1  no_answer_line  | acc 1.00  mean tokens 3327  truncated 0  73s
+  [O-high T4] 13/50  math-026  OK    tokens   8844  calls 1    | acc 1.00  mean tokens 3751  truncated 0  74s
+  [O-high T4] 14/50  math-491  OK    tokens   2781  calls 1    | acc 1.00  mean tokens 3682  truncated 0  75s
+  [O-high T4] 15/50  math-321  OK    tokens    977  calls 1    | acc 1.00  mean tokens 3501  truncated 0  81s
+  [O-high T4] 16/50  math-142  OK    tokens  11701  calls 1    | acc 1.00  mean tokens 4014  truncated 0  82s
+  [O-high T4] 17/50  math-088  OK    tokens  14455  calls 1    | acc 1.00  mean tokens 4628  truncated 0  102s
+  [O-high T4] 18/50  math-188  OK    tokens   3448  calls 1    | acc 1.00  mean tokens 4562  truncated 0  105s
+  [O-high T4] 19/50  math-424  OK    tokens    581  calls 1    | acc 1.00  mean tokens 4353  truncated 0  105s
+  [O-high T4] 20/50  math-244  OK    tokens   3591  calls 1    | acc 1.00  mean tokens 4315  truncated 0  107s
+  [O-high T4] 21/50  math-498  OK    tokens  11304  calls 1    | acc 1.00  mean tokens 4648  truncated 0  107s
+  [O-high T4] 22/50  math-254  OK    tokens   1006  calls 1    | acc 1.00  mean tokens 4482  truncated 0  111s
+  [O-high T4] 23/50  math-327  OK    tokens   7247  calls 1    | acc 1.00  mean tokens 4602  truncated 0  124s
+  [O-high T4] 24/50  math-482  OK    tokens   2873  calls 1    | acc 1.00  mean tokens 4530  truncated 0  125s
+  [O-high T4] 25/50  math-479  OK    tokens   4007  calls 1    | acc 1.00  mean tokens 4509  truncated 0  135s
+  [O-high T4] 26/50  math-151  OK    tokens   5494  calls 1    | acc 1.00  mean tokens 4547  truncated 0  164s
+  [O-high T4] 27/50  math-303  OK    tokens  15541  calls 1    | acc 1.00  mean tokens 4954  truncated 0  190s
+  [O-high T4] 28/50  math-328  OK    tokens   7461  calls 1    | acc 1.00  mean tokens 5044  truncated 0  191s
+  [O-high T4] 29/50  math-063  OK    tokens   5711  calls 1    | acc 1.00  mean tokens 5067  truncated 0  208s
+  [O-high T4] 30/50  math-189  OK    tokens  11667  calls 1  no_answer_line  | acc 1.00  mean tokens 5287  truncated 0  211s
+  [O-high T4] 31/50  math-239  OK    tokens  26189  calls 1  no_answer_line  | acc 1.00  mean tokens 5961  truncated 0  225s
+  [O-high T4] 32/50  math-434  OK    tokens   2599  calls 1    | acc 1.00  mean tokens 5856  truncated 0  230s
+  [O-high T4] 33/50  math-050  OK    tokens   4175  calls 1  no_answer_line  | acc 1.00  mean tokens 5805  truncated 0  239s
+  [O-high T4] 34/50  math-330  OK    tokens   1797  calls 1    | acc 1.00  mean tokens 5687  truncated 0  243s
+  [O-high T4] 35/50  math-080  OK    tokens  18384  calls 1  no_answer_line  | acc 1.00  mean tokens 6050  truncated 0  253s
+  [O-high T4] 36/50  math-241  OK    tokens   1972  calls 1    | acc 1.00  mean tokens 5937  truncated 0  258s
+  [O-high T4] 37/50  math-009  OK    tokens  19969  calls 1    | acc 1.00  mean tokens 6316  truncated 0  260s
+  [O-high T4] 38/50  math-417  OK    tokens   1218  calls 1    | acc 1.00  mean tokens 6182  truncated 0  268s
+  [O-high T4] 39/50  math-170  OK    tokens   6092  calls 1  no_answer_line  | acc 1.00  mean tokens 6180  truncated 0  272s
+  [O-high T4] 40/50  math-094  FAIL  tokens  28444  calls 1  truncated  | acc 0.97  mean tokens 6736  truncated 1  280s
+  [O-high T4] 41/50  math-357  OK    tokens   1607  calls 1    | acc 0.98  mean tokens 6611  truncated 1  283s
+  [O-high T4] 42/50  math-385  OK    tokens   1425  calls 1    | acc 0.98  mean tokens 6488  truncated 1  290s
+  [O-high T4] 43/50  math-173  OK    tokens   4427  calls 1    | acc 0.98  mean tokens 6440  truncated 1  291s
+  [O-high T4] 44/50  math-448  OK    tokens   1248  calls 1    | acc 0.98  mean tokens 6322  truncated 1  291s
+  [O-high T4] 45/50  math-391  OK    tokens   3969  calls 1    | acc 0.98  mean tokens 6269  truncated 1  318s
+  [O-high T4] 46/50  math-306  OK    tokens  21086  calls 1    | acc 0.98  mean tokens 6592  truncated 1  352s
+  [O-high T4] 47/50  math-152  OK    tokens  19915  calls 1  no_answer_line  | acc 0.98  mean tokens 6875  truncated 1  385s
+  [O-high T4] 48/50  math-432  OK    tokens  26395  calls 1  no_answer_line  | acc 0.98  mean tokens 7282  truncated 1  387s
+  [O-high T4] 49/50  math-168  OK    tokens  21698  calls 1  no_answer_line  | acc 0.98  mean tokens 7576  truncated 1  412s
+  [O-high T4] 50/50  math-136  OK    tokens  26505  calls 1  no_answer_line  | acc 0.98  mean tokens 7954  truncated 1  427s
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+O-low     T1     42  100  0.87       570         555           41    1.0   0.00        0.4          656
+O-low     T2     42  100  0.96       254         234           83    1.0   0.00        0.7          265
+O-low     T4     42   50  0.84      1224         905          620    1.0   0.00        6.7         1457
+O-high    T1     42  100  0.84       979         782          450    1.0   0.00        3.1         1165
+O-high    T2     42  100  0.97       995         618          814    1.0   0.00        5.8         1025
+O-high    T4     42   50  0.98      7954        4106         7362    1.0   0.02       57.2         8117
+
+Sanity checks passed (reasoning on/off as expected, tool calls present where needed).
+
+Releasing the GPU (conductor profile none) ...
+  GPU released.
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+S         T1     42  100  0.70       456         453            0    1.0   0.00        0.4          651
+S         T2     42  100  0.92       406         364            0    1.0   0.00        2.5          441
+S         T4     42   50  1.00      2422        1441            0    1.0   0.00       19.3         2422
+S-on      T1     42  100  0.75      2856        1828         2400    1.0   0.00       20.8         3808
+S-on      T2     42  100  0.93      2641        1326         2318    1.0   0.02       21.9         2840
+S-on      T4     42   50  0.80     16400       18760        15553    1.0   0.20      162.4        20501
+Q-off     T1     42  100  0.71       456         454            0    1.0   0.00        0.8          642
+Q-off     T2     42  100  0.96       494         425            0    1.0   0.00       20.4          515
+Q-off     T4     42   50  0.94      2318        1572            0    1.0   0.00      113.2         2465
+Q-low     T1     42  100  0.79       632         622          146    1.0   0.00        8.2          800
+Q-low     T2     42  100  0.96       434         396          172    1.0   0.00       15.8          452
+Q-low     T4     42   50  0.96      2374        1324         1703    1.0   0.00      113.4         2473
+Q-med     T1     42  100  0.80       664         648          209    1.0   0.00       11.5          830
+Q-med     T2     42  100  0.96       449         387          203    1.0   0.00       18.2          468
+Q-med     T4     42   50  0.98      1969        1298         1352    1.0   0.00       94.3         2009
+Q-xhigh   T1     42  100  0.79       676         579          178    1.0   0.00        9.8          855
+Q-xhigh   T2     42  100  0.97       627         319          419    1.0   0.00       25.1          647
+Q-xhigh   T4     42   50  0.98      3027        1584         2551    1.0   0.00      147.2         3089
+G-off     T1     42  100  0.81       603         601            0    1.0   0.00        0.2          744
+G-off     T2     42  100  0.94       341         320            0    1.0   0.00        3.6          363
+G-off     T4     42   50  0.98       897         841            0    1.0   0.00       11.7          916
+G-on      T1     42  100  0.85       987         876          377    1.0   0.00        6.2         1161
+G-on      T2     42  100  0.97      1401         802         1032    1.0   0.00       21.0         1445
+G-on      T4     42   50  1.00      4319        3948         3491    1.0   0.00       71.1         4319
+O-low     T1     42  100  0.87       570         555           41    1.0   0.00        0.4          656
+O-low     T2     42  100  0.96       254         234           83    1.0   0.00        0.7          265
+O-low     T4     42   50  0.84      1224         905          620    1.0   0.00        6.7         1457
+O-high    T1     42  100  0.84       979         782          450    1.0   0.00        3.1         1165
+O-high    T2     42  100  0.97       995         618          814    1.0   0.00        5.8         1025
+O-high    T4     42   50  0.98      7954        4106         7362    1.0   0.02       57.2         8117
+Q-A       T3     42   20  1.00      5613        5920            0    3.8   0.00       22.9         5613
+Q-A-low   T3     42   20  1.00      5477        4826          380    3.3   0.00       42.8         5477
+
+Wrote <repo>/results\summary.json
+
+PLAN FINISHED.
+exit 0

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Cheaper Tokens, Costlier Tasks: Measuring Tokens per Task Across Reasoning Settings, Model Size and Agentic Tool Use"
+type: software
+authors:
+  - family-names: Ho
+    given-names: Kalun
+version: 1.0.0
+date-released: 2026-11-08
+license: MIT
+repository-code: "https://github.com/kalunho17/yt-experiment-001"
+keywords:
+  - large language models
+  - inference cost
+  - test-time compute
+  - reasoning
+  - agents
+  - Jevons paradox
+preferred-citation:
+  type: report
+  title: "Cheaper Tokens, Costlier Tasks: Measuring Tokens per Task Across Reasoning Settings, Model Size and Agentic Tool Use"
+  authors:
+    - family-names: Ho
+      given-names: Kalun
+  year: 2026
+  month: 11

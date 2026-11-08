@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tokens-per-task"
+version = "1.0.0"
+description = "Measure tokens per task across reasoning settings, model size and agentic tool use on any OpenAI-compatible server."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Kalun Ho" }]
+dependencies = []   # the harness uses the standard library only
+
+[project.optional-dependencies]
+analysis = ["matplotlib>=3.8"]
+test = ["pytest>=8"]
+
+[project.scripts]
+tokens-per-task = "tokens_per_task.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

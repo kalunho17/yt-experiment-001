@@ -1,0 +1,338 @@
+[
+ {
+  "id": "t3-01",
+  "kind": "average",
+  "question": "What was the average invoice amount from Moreau Fournitures SARL in Q3 2025, in EUR rounded to cents?",
+  "answer_type": "number",
+  "answer": 1224.39,
+  "params": {
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q3"
+  },
+  "expected_tool_calls": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "t3-02",
+  "kind": "diff",
+  "question": "In Q2 2025, how much more did Nordhafen Logistik GmbH invoice than Kessler Industriebedarf KG? Give Nordhafen Logistik GmbH's total minus Kessler Industriebedarf KG's total in EUR (negative if Kessler Industriebedarf KG's total is higher).",
+  "answer_type": "number",
+  "answer": -14450.82,
+  "params": {
+   "a": "Nordhafen Logistik GmbH",
+   "b": "Kessler Industriebedarf KG",
+   "quarter": "Q2"
+  },
+  "expected_tool_calls": [
+   3,
+   5
+  ]
+ },
+ {
+  "id": "t3-03",
+  "kind": "lowest",
+  "question": "Of the suppliers Falkenried IT-Beratung GmbH, Lindqvist Datasystem AB and Van Dijk Verpakkingen B.V., which one had the lowest total invoiced amount in Q4 2025?",
+  "answer_type": "supplier",
+  "answer": "Lindqvist Datasystem AB",
+  "params": {
+   "suppliers": [
+    "Falkenried IT-Beratung GmbH",
+    "Lindqvist Datasystem AB",
+    "Van Dijk Verpakkingen B.V."
+   ],
+   "quarter": "Q4"
+  },
+  "expected_tool_calls": [
+   3,
+   6
+  ]
+ },
+ {
+  "id": "t3-04",
+  "kind": "highest",
+  "question": "Of the suppliers Nordhafen Logistik GmbH, Rheintal Facility Services GmbH and Van Dijk Verpakkingen B.V., which one had the highest total invoiced amount in Q4 2025?",
+  "answer_type": "supplier",
+  "answer": "Van Dijk Verpakkingen B.V.",
+  "params": {
+   "suppliers": [
+    "Nordhafen Logistik GmbH",
+    "Rheintal Facility Services GmbH",
+    "Van Dijk Verpakkingen B.V."
+   ],
+   "quarter": "Q4"
+  },
+  "expected_tool_calls": [
+   3,
+   6
+  ]
+ },
+ {
+  "id": "t3-05",
+  "kind": "max_invoice",
+  "question": "What was the largest single invoice amount from Falkenried IT-Beratung GmbH in the second half of 2025 (Q3 and Q4), in EUR?",
+  "answer_type": "number",
+  "answer": 2730.27,
+  "params": {
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarters": [
+    "Q3",
+    "Q4"
+   ]
+  },
+  "expected_tool_calls": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "t3-06",
+  "kind": "qoq",
+  "question": "By what percentage did the total amount invoiced by Moreau Fournitures SARL change from Q1 to Q2 2025? Give the change in percent, rounded to one decimal (negative for a decrease).",
+  "answer_type": "number",
+  "answer": 207.4,
+  "params": {
+   "supplier": "Moreau Fournitures SARL",
+   "from": "Q1",
+   "to": "Q2"
+  },
+  "expected_tool_calls": [
+   3,
+   5
+  ]
+ },
+ {
+  "id": "t3-07",
+  "kind": "highest",
+  "question": "Of the suppliers Brandt Werkzeugbau GmbH, Lindqvist Datasystem AB and Van Dijk Verpakkingen B.V., which one had the highest total invoiced amount in Q2 2025?",
+  "answer_type": "supplier",
+  "answer": "Van Dijk Verpakkingen B.V.",
+  "params": {
+   "suppliers": [
+    "Brandt Werkzeugbau GmbH",
+    "Lindqvist Datasystem AB",
+    "Van Dijk Verpakkingen B.V."
+   ],
+   "quarter": "Q2"
+  },
+  "expected_tool_calls": [
+   3,
+   6
+  ]
+ },
+ {
+  "id": "t3-08",
+  "kind": "total",
+  "question": "What was the total amount invoiced by Weidmann Maschinenbau GmbH & Co. KG in Q3 2025, in EUR?",
+  "answer_type": "number",
+  "answer": 30189.92,
+  "params": {
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q3"
+  },
+  "expected_tool_calls": [
+   2,
+   2
+  ]
+ },
+ {
+  "id": "t3-09",
+  "kind": "count_above",
+  "question": "How many invoices from Rheintal Facility Services GmbH in the second half of 2025 (Q3 and Q4) had an amount above EUR 2,500?",
+  "answer_type": "number",
+  "answer": 13,
+  "params": {
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarters": [
+    "Q3",
+    "Q4"
+   ],
+   "threshold": 2500
+  },
+  "expected_tool_calls": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "t3-10",
+  "kind": "max_invoice",
+  "question": "What was the largest single invoice amount from Castellano Servizi S.r.l. in the first half of 2025 (Q1 and Q2), in EUR?",
+  "answer_type": "number",
+  "answer": 3430.6,
+  "params": {
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarters": [
+    "Q1",
+    "Q2"
+   ]
+  },
+  "expected_tool_calls": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "t3-11",
+  "kind": "total",
+  "question": "What was the total amount invoiced by Rheintal Facility Services GmbH in Q3 2025, in EUR?",
+  "answer_type": "number",
+  "answer": 57542.99,
+  "params": {
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3"
+  },
+  "expected_tool_calls": [
+   2,
+   2
+  ]
+ },
+ {
+  "id": "t3-12",
+  "kind": "diff",
+  "question": "In Q2 2025, how much more did Moreau Fournitures SARL invoice than Rheintal Facility Services GmbH? Give Moreau Fournitures SARL's total minus Rheintal Facility Services GmbH's total in EUR (negative if Rheintal Facility Services GmbH's total is higher).",
+  "answer_type": "number",
+  "answer": -35949.09,
+  "params": {
+   "a": "Moreau Fournitures SARL",
+   "b": "Rheintal Facility Services GmbH",
+   "quarter": "Q2"
+  },
+  "expected_tool_calls": [
+   3,
+   5
+  ]
+ },
+ {
+  "id": "t3-13",
+  "kind": "qoq",
+  "question": "By what percentage did the total amount invoiced by Lindqvist Datasystem AB change from Q2 to Q3 2025? Give the change in percent, rounded to one decimal (negative for a decrease).",
+  "answer_type": "number",
+  "answer": -12.9,
+  "params": {
+   "supplier": "Lindqvist Datasystem AB",
+   "from": "Q2",
+   "to": "Q3"
+  },
+  "expected_tool_calls": [
+   3,
+   5
+  ]
+ },
+ {
+  "id": "t3-14",
+  "kind": "total",
+  "question": "What was the total amount invoiced by Falkenried IT-Beratung GmbH in Q3 2025, in EUR?",
+  "answer_type": "number",
+  "answer": 18583.01,
+  "params": {
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3"
+  },
+  "expected_tool_calls": [
+   2,
+   2
+  ]
+ },
+ {
+  "id": "t3-15",
+  "kind": "count_above",
+  "question": "How many invoices from Weidmann Maschinenbau GmbH & Co. KG in the first half of 2025 (Q1 and Q2) had an amount above EUR 2,500?",
+  "answer_type": "number",
+  "answer": 9,
+  "params": {
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarters": [
+    "Q1",
+    "Q2"
+   ],
+   "threshold": 2500
+  },
+  "expected_tool_calls": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "t3-16",
+  "kind": "average",
+  "question": "What was the average invoice amount from Van Dijk Verpakkingen B.V. in Q4 2025, in EUR rounded to cents?",
+  "answer_type": "number",
+  "answer": 7664.37,
+  "params": {
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4"
+  },
+  "expected_tool_calls": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "t3-17",
+  "kind": "count_above",
+  "question": "How many invoices from Rheintal Facility Services GmbH in the first half of 2025 (Q1 and Q2) had an amount above EUR 2,000?",
+  "answer_type": "number",
+  "answer": 23,
+  "params": {
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarters": [
+    "Q1",
+    "Q2"
+   ],
+   "threshold": 2000
+  },
+  "expected_tool_calls": [
+   2,
+   3
+  ]
+ },
+ {
+  "id": "t3-18",
+  "kind": "diff",
+  "question": "In Q2 2025, how much more did Castellano Servizi S.r.l. invoice than Hansekontor Office Supplies GmbH? Give Castellano Servizi S.r.l.'s total minus Hansekontor Office Supplies GmbH's total in EUR (negative if Hansekontor Office Supplies GmbH's total is higher).",
+  "answer_type": "number",
+  "answer": -28681.46,
+  "params": {
+   "a": "Castellano Servizi S.r.l.",
+   "b": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q2"
+  },
+  "expected_tool_calls": [
+   3,
+   5
+  ]
+ },
+ {
+  "id": "t3-19",
+  "kind": "total",
+  "question": "What was the total amount invoiced by Falkenried IT-Beratung GmbH in Q1 2025, in EUR?",
+  "answer_type": "number",
+  "answer": 16319.82,
+  "params": {
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1"
+  },
+  "expected_tool_calls": [
+   2,
+   2
+  ]
+ },
+ {
+  "id": "t3-20",
+  "kind": "qoq",
+  "question": "By what percentage did the total amount invoiced by Falkenried IT-Beratung GmbH change from Q1 to Q2 2025? Give the change in percent, rounded to one decimal (negative for a decrease).",
+  "answer_type": "number",
+  "answer": -9.4,
+  "params": {
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "from": "Q1",
+   "to": "Q2"
+  },
+  "expected_tool_calls": [
+   3,
+   5
+  ]
+ }
+]

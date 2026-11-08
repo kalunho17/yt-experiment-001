@@ -1,0 +1,299 @@
+PLAN: profiles text, text-qwen35-4b, text-gemma4, text-gptoss; smoke 5 items per task; smoke only; results in <repo>/results
+
+==============================================================================
+PROFILE text: Qwen3.8-27B, NVFP4 build (see root in setup.md)  configs Q-off, Q-low, Q-med, Q-xhigh, Q-A, Q-A-low
+==============================================================================
+
+GPU host gpu-host (NVIDIA GeForce RTX 5090): active profile none, phase none
+  activating text; a model load can take 10+ minutes
+  conductor: phase starting, active None at 0 s
+  conductor: phase warming, active None at 5 s
+  conductor: phase ready, active text at 110 s
+  vLLM answers at http://<gpu-host>:8100/v1 after 0 s
+  warm-up request: 1.8 s (not recorded)
+  setup.md already has a section for qwen3.8-27b-nvfp4
+
+Server http://<gpu-host>:8100/v1  model qwen3.8-27b-nvfp4  context 32768  max_tokens 28000  seed 42  concurrency 8  smoke 5 items/task
+Results -> <repo>/results/smoke/text
+
+== Q-off / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== Q-off / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== Q-off / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [Q-off T4] 1/5  math-238  OK    tokens    845  calls 1    | acc 1.00  mean tokens 845  truncated 0  39s
+  [Q-off T4] 2/5  math-251  OK    tokens   1406  calls 1    | acc 1.00  mean tokens 1126  truncated 0  65s
+  [Q-off T4] 3/5  math-024  OK    tokens   1434  calls 1    | acc 1.00  mean tokens 1228  truncated 0  67s
+  [Q-off T4] 4/5  math-197  OK    tokens   1410  calls 1    | acc 1.00  mean tokens 1274  truncated 0  67s
+  [Q-off T4] 5/5  math-118  OK    tokens   2518  calls 1    | acc 1.00  mean tokens 1523  truncated 0  124s
+
+== Q-low / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== Q-low / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== Q-low / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [Q-low T4] 1/5  math-238  OK    tokens    808  calls 1    | acc 1.00  mean tokens 808  truncated 0  36s
+  [Q-low T4] 2/5  math-251  OK    tokens    963  calls 1    | acc 1.00  mean tokens 886  truncated 0  40s
+  [Q-low T4] 3/5  math-118  OK    tokens   1129  calls 1    | acc 1.00  mean tokens 967  truncated 0  53s
+  [Q-low T4] 4/5  math-024  OK    tokens   1431  calls 1    | acc 1.00  mean tokens 1083  truncated 0  64s
+  [Q-low T4] 5/5  math-197  OK    tokens   1575  calls 1    | acc 1.00  mean tokens 1181  truncated 0  74s
+
+== Q-med / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== Q-med / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== Q-med / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [Q-med T4] 1/5  math-238  OK    tokens    465  calls 1    | acc 1.00  mean tokens 465  truncated 0  20s
+  [Q-med T4] 2/5  math-251  OK    tokens   1241  calls 1    | acc 1.00  mean tokens 853  truncated 0  56s
+  [Q-med T4] 3/5  math-024  OK    tokens   1383  calls 1    | acc 1.00  mean tokens 1030  truncated 0  64s
+  [Q-med T4] 4/5  math-118  OK    tokens   1537  calls 1    | acc 1.00  mean tokens 1156  truncated 0  76s
+  [Q-med T4] 5/5  math-197  OK    tokens   1618  calls 1    | acc 1.00  mean tokens 1249  truncated 0  78s
+
+== Q-xhigh / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== Q-xhigh / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== Q-xhigh / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [Q-xhigh T4] 1/5  math-238  OK    tokens    727  calls 1    | acc 1.00  mean tokens 727  truncated 0  31s
+  [Q-xhigh T4] 2/5  math-118  OK    tokens    806  calls 1    | acc 1.00  mean tokens 766  truncated 0  36s
+  [Q-xhigh T4] 3/5  math-197  OK    tokens   1329  calls 1    | acc 1.00  mean tokens 954  truncated 0  61s
+  [Q-xhigh T4] 4/5  math-024  OK    tokens   1503  calls 1    | acc 1.00  mean tokens 1091  truncated 0  68s
+  [Q-xhigh T4] 5/5  math-251  OK    tokens   4369  calls 1    | acc 1.00  mean tokens 1747  truncated 0  210s
+
+== Q-A / T3 agent (invoice ledger): 5 items, 5 already done, 0 to run
+
+== Q-A-low / T3 agent (invoice ledger): 5 items, 5 already done, 0 to run
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+Q-off     T1     42    5  1.00       451         453            0    1.0   0.00        0.9          451
+Q-off     T2     42    5  0.80       460         452            0    1.0   0.00       18.2          575
+Q-off     T4     42    5  1.00      1523        1410            0    1.0   0.00       72.6         1523
+Q-low     T1     42    5  1.00       565         539           84    1.0   0.00        4.8          565
+Q-low     T2     42    5  0.80       375         377          119    1.0   0.00       12.5          469
+Q-low     T4     42    5  1.00      1181        1129          590    1.0   0.00       53.4         1181
+Q-med     T1     42    5  1.00       580         596          129    1.0   0.00        7.0          580
+Q-med     T2     42    5  0.80       346         360          124    1.0   0.00       12.6          433
+Q-med     T4     42    5  1.00      1249        1383          736    1.0   0.00       58.5         1249
+Q-xhigh   T1     42    5  1.00       559         564           66    1.0   0.00        3.9          559
+Q-xhigh   T2     42    5  0.80       298         295           98    1.0   0.00        8.1          372
+Q-xhigh   T4     42    5  1.00      1747        1329         1335    1.0   0.00       81.2         1747
+Q-A       T3     42    5  1.00      5153        5459            0    3.2   0.00       22.4         5153
+Q-A-low   T3     42    5  1.00      6598        7138          402    3.8   0.00       44.9         6598
+
+Sanity checks passed (reasoning on/off as expected, tool calls present where needed).
+
+Smoke test of text passed.
+
+==============================================================================
+PROFILE text-qwen35-4b: Qwen/Qwen3.5-4B (see root in setup.md)  configs S, S-on
+==============================================================================
+
+GPU host gpu-host (NVIDIA GeForce RTX 5090): active profile text, phase ready
+  activating text-qwen35-4b (stops text); a model load can take 10+ minutes
+  conductor: phase stopping, active None at 0 s
+  conductor: phase warming, active None at 5 s
+  conductor: phase ready, active text-qwen35-4b at 105 s
+  vLLM answers at http://<gpu-host>:8100/v1 after 0 s
+  warm-up request: 18.9 s (not recorded)
+  setup.md already has a section for qwen3.5-4b
+
+Server http://<gpu-host>:8100/v1  model qwen3.5-4b  context 32768  max_tokens 28000  seed 42  concurrency 8  smoke 5 items/task
+Results -> <repo>/results/smoke/text-qwen35-4b
+
+== S / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== S / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== S / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [S T4] 1/5  math-238  OK    tokens    685  calls 1    | acc 1.00  mean tokens 685  truncated 0  5s
+  [S T4] 2/5  math-024  OK    tokens   1319  calls 1    | acc 1.00  mean tokens 1002  truncated 0  9s
+  [S T4] 3/5  math-197  OK    tokens   1600  calls 1    | acc 1.00  mean tokens 1201  truncated 0  12s
+  [S T4] 4/5  math-251  OK    tokens   1973  calls 1    | acc 1.00  mean tokens 1394  truncated 0  14s
+  [S T4] 5/5  math-118  OK    tokens   2022  calls 1    | acc 1.00  mean tokens 1520  truncated 0  15s
+
+== S-on / T1 classify (Banking77): 5 items, 0 already done, 5 to run
+  [S-on T1] 1/5  b77-0102  OK    tokens    962  calls 1    | acc 1.00  mean tokens 962  truncated 0  4s
+  [S-on T1] 2/5  b77-2619  OK    tokens   1789  calls 1    | acc 1.00  mean tokens 1376  truncated 0  11s
+  [S-on T1] 3/5  b77-1126  OK    tokens   1882  calls 1    | acc 1.00  mean tokens 1544  truncated 0  11s
+  [S-on T1] 4/5  b77-0456  OK    tokens   2302  calls 1    | acc 1.00  mean tokens 1734  truncated 0  14s
+  [S-on T1] 5/5  b77-3037  OK    tokens   4032  calls 1    | acc 1.00  mean tokens 2193  truncated 0  26s
+
+== S-on / T2 calculate (GSM8K): 5 items, 0 already done, 5 to run
+  [S-on T2] 1/5  gsm-0501  OK    tokens    966  calls 1    | acc 1.00  mean tokens 966  truncated 0  7s
+  [S-on T2] 2/5  gsm-0228  OK    tokens    978  calls 1    | acc 1.00  mean tokens 972  truncated 0  7s
+  [S-on T2] 3/5  gsm-1309  FAIL  tokens   1550  calls 1    | acc 0.67  mean tokens 1165  truncated 0  12s
+  [S-on T2] 4/5  gsm-0051  OK    tokens   2714  calls 1    | acc 0.75  mean tokens 1552  truncated 0  20s
+  [S-on T2] 5/5  gsm-0563  OK    tokens   3468  calls 1    | acc 0.80  mean tokens 1935  truncated 0  25s
+
+== S-on / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [S-on T4] 1/5  math-024  OK    tokens   7220  calls 1    | acc 1.00  mean tokens 7220  truncated 0  61s
+  [S-on T4] 2/5  math-251  OK    tokens   7649  calls 1    | acc 1.00  mean tokens 7434  truncated 0  64s
+  [S-on T4] 3/5  math-197  OK    tokens  13120  calls 1    | acc 1.00  mean tokens 9330  truncated 0  109s
+  [S-on T4] 4/5  math-118  OK    tokens  14597  calls 1    | acc 1.00  mean tokens 10646  truncated 0  121s
+  [S-on T4] 5/5  math-238  FAIL  tokens  19790  calls 1    | acc 0.80  mean tokens 12475  truncated 0  156s
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+S         T1     42    5  0.60       451         452            0    1.0   0.00        0.1          752
+S         T2     42    5  0.80       371         376            0    1.0   0.00        2.2          464
+S         T4     42    5  1.00      1520        1600            0    1.0   0.00       11.1         1520
+S-on      T1     42    5  1.00      2193        1882         1742    1.0   0.00       13.3         2193
+S-on      T2     42    5  0.80      1935        1550         1622    1.0   0.00       14.2         2419
+S-on      T4     42    5  0.80     12475       13120        10971    1.0   0.00      102.3        15594
+
+Sanity checks passed (reasoning on/off as expected, tool calls present where needed).
+
+Smoke test of text-qwen35-4b passed.
+
+==============================================================================
+PROFILE text-gemma4: Gemma 4 31B, QAT W4A16 build (see root in setup.md)  configs G-off, G-on
+==============================================================================
+
+GPU host gpu-host (NVIDIA GeForce RTX 5090): active profile text-qwen35-4b, phase ready
+  activating text-gemma4 (stops text-qwen35-4b); a model load can take 10+ minutes
+  conductor: phase stopping, active None at 0 s
+  conductor: phase warming, active None at 5 s
+  conductor: phase ready, active text-gemma4 at 90 s
+  vLLM answers at http://<gpu-host>:8100/v1 after 0 s
+  warm-up request: 0.1 s (not recorded)
+  setup.md already has a section for gemma4-31b-qat-w4a16
+
+Server http://<gpu-host>:8100/v1  model gemma4-31b-qat-w4a16  context 32768  max_tokens 28000  seed 42  concurrency 4  smoke 5 items/task
+Results -> <repo>/results/smoke/text-gemma4
+
+== G-off / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== G-off / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== G-off / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [G-off T4] 1/5  math-238  OK    tokens    649  calls 1    | acc 1.00  mean tokens 649  truncated 0  9s
+  [G-off T4] 2/5  math-024  OK    tokens    799  calls 1    | acc 1.00  mean tokens 724  truncated 0  10s
+  [G-off T4] 3/5  math-251  OK    tokens    953  calls 1    | acc 1.00  mean tokens 800  truncated 0  12s
+  [G-off T4] 4/5  math-118  OK    tokens   1230  calls 1    | acc 1.00  mean tokens 908  truncated 0  18s
+  [G-off T4] 5/5  math-197  OK    tokens   1131  calls 1    | acc 1.00  mean tokens 952  truncated 0  24s
+
+== G-on / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== G-on / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== G-on / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [G-on T4] 1/5  math-238  OK    tokens   1556  calls 1    | acc 1.00  mean tokens 1556  truncated 0  23s
+  [G-on T4] 2/5  math-024  OK    tokens   2586  calls 1    | acc 1.00  mean tokens 2071  truncated 0  40s
+  [G-on T4] 3/5  math-251  OK    tokens   3670  calls 1    | acc 1.00  mean tokens 2604  truncated 0  57s
+  [G-on T4] 4/5  math-197  OK    tokens   3949  calls 1    | acc 1.00  mean tokens 2940  truncated 0  85s
+  [G-on T4] 5/5  math-118  OK    tokens   7890  calls 1    | acc 1.00  mean tokens 3930  truncated 0  124s
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+G-off     T1     42    5  1.00       598         601            0    1.0   0.00        0.3          598
+G-off     T2     42    5  0.80       337         336            0    1.0   0.00        3.5          422
+G-off     T4     42    5  1.00       952         953            0    1.0   0.00       12.7          952
+G-on      T1     42    5  1.00       810         803          204    1.0   0.00        3.5          810
+G-on      T2     42    5  0.80       736         739          394    1.0   0.00        9.5          920
+G-on      T4     42    5  1.00      3930        3670         3149    1.0   0.00       61.1         3930
+
+Sanity checks passed (reasoning on/off as expected, tool calls present where needed).
+
+Smoke test of text-gemma4 passed.
+
+==============================================================================
+PROFILE text-gptoss: openai/gpt-oss-20b (see root in setup.md)  configs O-low, O-high
+==============================================================================
+
+GPU host gpu-host (NVIDIA GeForce RTX 5090): active profile text-gemma4, phase ready
+  activating text-gptoss (stops text-gemma4); a model load can take 10+ minutes
+  conductor: phase stopping, active None at 0 s
+  conductor: phase warming, active None at 5 s
+  conductor: phase ready, active text-gptoss at 45 s
+  vLLM answers at http://<gpu-host>:8100/v1 after 0 s
+  warm-up request: 0.4 s (not recorded)
+  setup.md already has a section for gpt-oss-20b
+
+Server http://<gpu-host>:8100/v1  model gpt-oss-20b  context 32768  max_tokens 28000  seed 42  concurrency 8  smoke 5 items/task
+Results -> <repo>/results/smoke/text-gptoss
+
+== O-low / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== O-low / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== O-low / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [O-low T4] 1/5  math-238  OK    tokens    483  calls 1    | acc 1.00  mean tokens 483  truncated 0  2s
+  [O-low T4] 2/5  math-251  OK    tokens    664  calls 1    | acc 1.00  mean tokens 574  truncated 0  3s
+  [O-low T4] 3/5  math-024  OK    tokens    912  calls 1    | acc 1.00  mean tokens 686  truncated 0  4s
+  [O-low T4] 4/5  math-197  OK    tokens    914  calls 1    | acc 1.00  mean tokens 743  truncated 0  4s
+  [O-low T4] 5/5  math-118  OK    tokens    941  calls 1    | acc 1.00  mean tokens 783  truncated 0  5s
+
+== O-high / T1 classify (Banking77): 5 items, 5 already done, 0 to run
+
+== O-high / T2 calculate (GSM8K): 5 items, 5 already done, 0 to run
+
+== O-high / T4 hard maths (MATH-500 level 5): 5 items, 0 already done, 5 to run
+  [O-high T4] 1/5  math-238  OK    tokens   1688  calls 1    | acc 1.00  mean tokens 1688  truncated 0  10s
+  [O-high T4] 2/5  math-024  OK    tokens   1904  calls 1    | acc 1.00  mean tokens 1796  truncated 0  11s
+  [O-high T4] 3/5  math-118  OK    tokens   3887  calls 1    | acc 1.00  mean tokens 2493  truncated 0  23s
+  [O-high T4] 4/5  math-251  OK    tokens   4771  calls 1    | acc 1.00  mean tokens 3062  truncated 0  27s
+  [O-high T4] 5/5  math-197  OK    tokens   4836  calls 1    | acc 1.00  mean tokens 3417  truncated 0  27s
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+O-low     T1     42    5  1.00       543         543           19    1.0   0.00        0.2          543
+O-low     T2     42    5  0.80       237         234           61    1.0   0.00        0.5          296
+O-low     T4     42    5  1.00       783         912          266    1.0   0.00        3.6          783
+O-high    T1     42    5  1.00       665         658          141    1.0   0.00        0.9          665
+O-high    T2     42    5  0.80       670         476          488    1.0   0.00        2.7          838
+O-high    T4     42    5  1.00      3417        3887         2969    1.0   0.00       19.6         3417
+
+Sanity checks passed (reasoning on/off as expected, tool calls present where needed).
+
+Smoke test of text-gptoss passed.
+
+Releasing the GPU (conductor profile none) ...
+  GPU released.
+
+text:
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+Q-off     T1     42    5  1.00       451         453            0    1.0   0.00        0.9          451
+Q-off     T2     42    5  0.80       460         452            0    1.0   0.00       18.2          575
+Q-off     T4     42    5  1.00      1523        1410            0    1.0   0.00       72.6         1523
+Q-low     T1     42    5  1.00       565         539           84    1.0   0.00        4.8          565
+Q-low     T2     42    5  0.80       375         377          119    1.0   0.00       12.5          469
+Q-low     T4     42    5  1.00      1181        1129          590    1.0   0.00       53.4         1181
+Q-med     T1     42    5  1.00       580         596          129    1.0   0.00        7.0          580
+Q-med     T2     42    5  0.80       346         360          124    1.0   0.00       12.6          433
+Q-med     T4     42    5  1.00      1249        1383          736    1.0   0.00       58.5         1249
+Q-xhigh   T1     42    5  1.00       559         564           66    1.0   0.00        3.9          559
+Q-xhigh   T2     42    5  0.80       298         295           98    1.0   0.00        8.1          372
+Q-xhigh   T4     42    5  1.00      1747        1329         1335    1.0   0.00       81.2         1747
+Q-A       T3     42    5  1.00      5153        5459            0    3.2   0.00       22.4         5153
+Q-A-low   T3     42    5  1.00      6598        7138          402    3.8   0.00       44.9         6598
+
+text-qwen35-4b:
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+S         T1     42    5  0.60       451         452            0    1.0   0.00        0.1          752
+S         T2     42    5  0.80       371         376            0    1.0   0.00        2.2          464
+S         T4     42    5  1.00      1520        1600            0    1.0   0.00       11.1         1520
+S-on      T1     42    5  1.00      2193        1882         1742    1.0   0.00       13.3         2193
+S-on      T2     42    5  0.80      1935        1550         1622    1.0   0.00       14.2         2419
+S-on      T4     42    5  0.80     12475       13120        10971    1.0   0.00      102.3        15594
+
+text-gemma4:
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+G-off     T1     42    5  1.00       598         601            0    1.0   0.00        0.3          598
+G-off     T2     42    5  0.80       337         336            0    1.0   0.00        3.5          422
+G-off     T4     42    5  1.00       952         953            0    1.0   0.00       12.7          952
+G-on      T1     42    5  1.00       810         803          204    1.0   0.00        3.5          810
+G-on      T2     42    5  0.80       736         739          394    1.0   0.00        9.5          920
+G-on      T4     42    5  1.00      3930        3670         3149    1.0   0.00       61.1         3930
+
+text-gptoss:
+
+config    task  seed    n   acc  mean_tok  median_tok  mean_reason  calls  trunc  latency_s  tok/correct
+O-low     T1     42    5  1.00       543         543           19    1.0   0.00        0.2          543
+O-low     T2     42    5  0.80       237         234           61    1.0   0.00        0.5          296
+O-low     T4     42    5  1.00       783         912          266    1.0   0.00        3.6          783
+O-high    T1     42    5  1.00       665         658          141    1.0   0.00        0.9          665
+O-high    T2     42    5  0.80       670         476          488    1.0   0.00        2.7          838
+O-high    T4     42    5  1.00      3417        3887         2969    1.0   0.00       19.6         3417
+
+SMOKE STAGE PASSED for text, text-qwen35-4b, text-gemma4, text-gptoss. Look at the replies in <repo>/results\smoke, then run `python run.py --plan` for the full runs.
+exit 0

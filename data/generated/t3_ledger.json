@@ -1,0 +1,3518 @@
+{
+ "suppliers": [
+  "Brandt Werkzeugbau GmbH",
+  "Nordhafen Logistik GmbH",
+  "Kessler Industriebedarf KG",
+  "Alpenblick Elektrotechnik AG",
+  "Van Dijk Verpakkingen B.V.",
+  "Rheintal Facility Services GmbH",
+  "Lindqvist Datasystem AB",
+  "Moreau Fournitures SARL",
+  "Hansekontor Office Supplies GmbH",
+  "Weidmann Maschinenbau GmbH & Co. KG",
+  "Castellano Servizi S.r.l.",
+  "Falkenried IT-Beratung GmbH"
+ ],
+ "invoices": [
+  {
+   "invoice_id": "INV-2025-0001",
+   "date": "2025-01-01",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 35601
+  },
+  {
+   "invoice_id": "INV-2025-0002",
+   "date": "2025-01-01",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 54013
+  },
+  {
+   "invoice_id": "INV-2025-0003",
+   "date": "2025-01-02",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 134403
+  },
+  {
+   "invoice_id": "INV-2025-0004",
+   "date": "2025-01-02",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 150246
+  },
+  {
+   "invoice_id": "INV-2025-0005",
+   "date": "2025-01-02",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 343060
+  },
+  {
+   "invoice_id": "INV-2025-0006",
+   "date": "2025-01-05",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 308977
+  },
+  {
+   "invoice_id": "INV-2025-0007",
+   "date": "2025-01-08",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 66773
+  },
+  {
+   "invoice_id": "INV-2025-0008",
+   "date": "2025-01-11",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 23818
+  },
+  {
+   "invoice_id": "INV-2025-0009",
+   "date": "2025-01-14",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 187051
+  },
+  {
+   "invoice_id": "INV-2025-0010",
+   "date": "2025-01-14",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 60777
+  },
+  {
+   "invoice_id": "INV-2025-0011",
+   "date": "2025-01-14",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q1",
+   "amount_cents": 135909
+  },
+  {
+   "invoice_id": "INV-2025-0012",
+   "date": "2025-01-15",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q1",
+   "amount_cents": 43521
+  },
+  {
+   "invoice_id": "INV-2025-0013",
+   "date": "2025-01-16",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 19811
+  },
+  {
+   "invoice_id": "INV-2025-0014",
+   "date": "2025-01-19",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q1",
+   "amount_cents": 469857
+  },
+  {
+   "invoice_id": "INV-2025-0015",
+   "date": "2025-01-19",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q1",
+   "amount_cents": 150920
+  },
+  {
+   "invoice_id": "INV-2025-0016",
+   "date": "2025-01-20",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q1",
+   "amount_cents": 802113
+  },
+  {
+   "invoice_id": "INV-2025-0017",
+   "date": "2025-01-20",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q1",
+   "amount_cents": 125104
+  },
+  {
+   "invoice_id": "INV-2025-0018",
+   "date": "2025-01-20",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 597179
+  },
+  {
+   "invoice_id": "INV-2025-0019",
+   "date": "2025-01-21",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q1",
+   "amount_cents": 49755
+  },
+  {
+   "invoice_id": "INV-2025-0020",
+   "date": "2025-01-21",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 82444
+  },
+  {
+   "invoice_id": "INV-2025-0021",
+   "date": "2025-01-22",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q1",
+   "amount_cents": 389642
+  },
+  {
+   "invoice_id": "INV-2025-0022",
+   "date": "2025-01-23",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 159575
+  },
+  {
+   "invoice_id": "INV-2025-0023",
+   "date": "2025-01-24",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q1",
+   "amount_cents": 113780
+  },
+  {
+   "invoice_id": "INV-2025-0024",
+   "date": "2025-01-24",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 454019
+  },
+  {
+   "invoice_id": "INV-2025-0025",
+   "date": "2025-01-26",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q1",
+   "amount_cents": 168247
+  },
+  {
+   "invoice_id": "INV-2025-0026",
+   "date": "2025-01-26",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q1",
+   "amount_cents": 130522
+  },
+  {
+   "invoice_id": "INV-2025-0027",
+   "date": "2025-01-26",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 178578
+  },
+  {
+   "invoice_id": "INV-2025-0028",
+   "date": "2025-01-27",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 61567
+  },
+  {
+   "invoice_id": "INV-2025-0029",
+   "date": "2025-01-27",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q1",
+   "amount_cents": 358874
+  },
+  {
+   "invoice_id": "INV-2025-0030",
+   "date": "2025-01-27",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q1",
+   "amount_cents": 272167
+  },
+  {
+   "invoice_id": "INV-2025-0031",
+   "date": "2025-01-27",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 687230
+  },
+  {
+   "invoice_id": "INV-2025-0032",
+   "date": "2025-01-28",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 73195
+  },
+  {
+   "invoice_id": "INV-2025-0033",
+   "date": "2025-01-29",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 154789
+  },
+  {
+   "invoice_id": "INV-2025-0034",
+   "date": "2025-01-29",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q1",
+   "amount_cents": 592630
+  },
+  {
+   "invoice_id": "INV-2025-0035",
+   "date": "2025-01-29",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 551855
+  },
+  {
+   "invoice_id": "INV-2025-0036",
+   "date": "2025-01-30",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 21642
+  },
+  {
+   "invoice_id": "INV-2025-0037",
+   "date": "2025-02-01",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 110998
+  },
+  {
+   "invoice_id": "INV-2025-0038",
+   "date": "2025-02-01",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 374222
+  },
+  {
+   "invoice_id": "INV-2025-0039",
+   "date": "2025-02-02",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q1",
+   "amount_cents": 162713
+  },
+  {
+   "invoice_id": "INV-2025-0040",
+   "date": "2025-02-02",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 729537
+  },
+  {
+   "invoice_id": "INV-2025-0041",
+   "date": "2025-02-07",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 222369
+  },
+  {
+   "invoice_id": "INV-2025-0042",
+   "date": "2025-02-07",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 172779
+  },
+  {
+   "invoice_id": "INV-2025-0043",
+   "date": "2025-02-07",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 128192
+  },
+  {
+   "invoice_id": "INV-2025-0044",
+   "date": "2025-02-07",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q1",
+   "amount_cents": 115164
+  },
+  {
+   "invoice_id": "INV-2025-0045",
+   "date": "2025-02-07",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q1",
+   "amount_cents": 208578
+  },
+  {
+   "invoice_id": "INV-2025-0046",
+   "date": "2025-02-08",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 229240
+  },
+  {
+   "invoice_id": "INV-2025-0047",
+   "date": "2025-02-10",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 138794
+  },
+  {
+   "invoice_id": "INV-2025-0048",
+   "date": "2025-02-10",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 116847
+  },
+  {
+   "invoice_id": "INV-2025-0049",
+   "date": "2025-02-11",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 160390
+  },
+  {
+   "invoice_id": "INV-2025-0050",
+   "date": "2025-02-11",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 1209485
+  },
+  {
+   "invoice_id": "INV-2025-0051",
+   "date": "2025-02-12",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q1",
+   "amount_cents": 499882
+  },
+  {
+   "invoice_id": "INV-2025-0052",
+   "date": "2025-02-12",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q1",
+   "amount_cents": 140236
+  },
+  {
+   "invoice_id": "INV-2025-0053",
+   "date": "2025-02-13",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q1",
+   "amount_cents": 148959
+  },
+  {
+   "invoice_id": "INV-2025-0054",
+   "date": "2025-02-14",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 387926
+  },
+  {
+   "invoice_id": "INV-2025-0055",
+   "date": "2025-02-14",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q1",
+   "amount_cents": 239397
+  },
+  {
+   "invoice_id": "INV-2025-0056",
+   "date": "2025-02-16",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 584584
+  },
+  {
+   "invoice_id": "INV-2025-0057",
+   "date": "2025-02-16",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q1",
+   "amount_cents": 333655
+  },
+  {
+   "invoice_id": "INV-2025-0058",
+   "date": "2025-02-17",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 1069912
+  },
+  {
+   "invoice_id": "INV-2025-0059",
+   "date": "2025-02-18",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 541211
+  },
+  {
+   "invoice_id": "INV-2025-0060",
+   "date": "2025-02-20",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 61494
+  },
+  {
+   "invoice_id": "INV-2025-0061",
+   "date": "2025-02-21",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 134765
+  },
+  {
+   "invoice_id": "INV-2025-0062",
+   "date": "2025-02-21",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 281159
+  },
+  {
+   "invoice_id": "INV-2025-0063",
+   "date": "2025-02-21",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 261530
+  },
+  {
+   "invoice_id": "INV-2025-0064",
+   "date": "2025-02-23",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 1158310
+  },
+  {
+   "invoice_id": "INV-2025-0065",
+   "date": "2025-02-25",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 234422
+  },
+  {
+   "invoice_id": "INV-2025-0066",
+   "date": "2025-02-25",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 163959
+  },
+  {
+   "invoice_id": "INV-2025-0067",
+   "date": "2025-02-25",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 235872
+  },
+  {
+   "invoice_id": "INV-2025-0068",
+   "date": "2025-02-25",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q1",
+   "amount_cents": 311887
+  },
+  {
+   "invoice_id": "INV-2025-0069",
+   "date": "2025-02-26",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q1",
+   "amount_cents": 30469
+  },
+  {
+   "invoice_id": "INV-2025-0070",
+   "date": "2025-02-27",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 985916
+  },
+  {
+   "invoice_id": "INV-2025-0071",
+   "date": "2025-02-27",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q1",
+   "amount_cents": 276015
+  },
+  {
+   "invoice_id": "INV-2025-0072",
+   "date": "2025-02-28",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 242051
+  },
+  {
+   "invoice_id": "INV-2025-0073",
+   "date": "2025-02-28",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q1",
+   "amount_cents": 684061
+  },
+  {
+   "invoice_id": "INV-2025-0074",
+   "date": "2025-03-02",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 129783
+  },
+  {
+   "invoice_id": "INV-2025-0075",
+   "date": "2025-03-03",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 193897
+  },
+  {
+   "invoice_id": "INV-2025-0076",
+   "date": "2025-03-04",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 86268
+  },
+  {
+   "invoice_id": "INV-2025-0077",
+   "date": "2025-03-05",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 106201
+  },
+  {
+   "invoice_id": "INV-2025-0078",
+   "date": "2025-03-06",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 203791
+  },
+  {
+   "invoice_id": "INV-2025-0079",
+   "date": "2025-03-07",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 1789193
+  },
+  {
+   "invoice_id": "INV-2025-0080",
+   "date": "2025-03-09",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 90796
+  },
+  {
+   "invoice_id": "INV-2025-0081",
+   "date": "2025-03-09",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 173434
+  },
+  {
+   "invoice_id": "INV-2025-0082",
+   "date": "2025-03-10",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 157326
+  },
+  {
+   "invoice_id": "INV-2025-0083",
+   "date": "2025-03-10",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q1",
+   "amount_cents": 193946
+  },
+  {
+   "invoice_id": "INV-2025-0084",
+   "date": "2025-03-10",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 83874
+  },
+  {
+   "invoice_id": "INV-2025-0085",
+   "date": "2025-03-12",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q1",
+   "amount_cents": 89060
+  },
+  {
+   "invoice_id": "INV-2025-0086",
+   "date": "2025-03-12",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 706955
+  },
+  {
+   "invoice_id": "INV-2025-0087",
+   "date": "2025-03-13",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q1",
+   "amount_cents": 104368
+  },
+  {
+   "invoice_id": "INV-2025-0088",
+   "date": "2025-03-14",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 79578
+  },
+  {
+   "invoice_id": "INV-2025-0089",
+   "date": "2025-03-15",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 67292
+  },
+  {
+   "invoice_id": "INV-2025-0090",
+   "date": "2025-03-16",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q1",
+   "amount_cents": 331837
+  },
+  {
+   "invoice_id": "INV-2025-0091",
+   "date": "2025-03-16",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 464317
+  },
+  {
+   "invoice_id": "INV-2025-0092",
+   "date": "2025-03-18",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 198365
+  },
+  {
+   "invoice_id": "INV-2025-0093",
+   "date": "2025-03-19",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q1",
+   "amount_cents": 32904
+  },
+  {
+   "invoice_id": "INV-2025-0094",
+   "date": "2025-03-19",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q1",
+   "amount_cents": 56280
+  },
+  {
+   "invoice_id": "INV-2025-0095",
+   "date": "2025-03-20",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 251702
+  },
+  {
+   "invoice_id": "INV-2025-0096",
+   "date": "2025-03-20",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q1",
+   "amount_cents": 179029
+  },
+  {
+   "invoice_id": "INV-2025-0097",
+   "date": "2025-03-21",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q1",
+   "amount_cents": 1434307
+  },
+  {
+   "invoice_id": "INV-2025-0098",
+   "date": "2025-03-22",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q1",
+   "amount_cents": 69933
+  },
+  {
+   "invoice_id": "INV-2025-0099",
+   "date": "2025-03-23",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 387258
+  },
+  {
+   "invoice_id": "INV-2025-0100",
+   "date": "2025-03-24",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 199376
+  },
+  {
+   "invoice_id": "INV-2025-0101",
+   "date": "2025-03-24",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 827925
+  },
+  {
+   "invoice_id": "INV-2025-0102",
+   "date": "2025-03-25",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q1",
+   "amount_cents": 299759
+  },
+  {
+   "invoice_id": "INV-2025-0103",
+   "date": "2025-03-26",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 32090
+  },
+  {
+   "invoice_id": "INV-2025-0104",
+   "date": "2025-03-26",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q1",
+   "amount_cents": 1793450
+  },
+  {
+   "invoice_id": "INV-2025-0105",
+   "date": "2025-03-28",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 147933
+  },
+  {
+   "invoice_id": "INV-2025-0106",
+   "date": "2025-03-28",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q1",
+   "amount_cents": 165466
+  },
+  {
+   "invoice_id": "INV-2025-0107",
+   "date": "2025-03-29",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q1",
+   "amount_cents": 252649
+  },
+  {
+   "invoice_id": "INV-2025-0108",
+   "date": "2025-03-29",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q1",
+   "amount_cents": 48846
+  },
+  {
+   "invoice_id": "INV-2025-0109",
+   "date": "2025-03-30",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q1",
+   "amount_cents": 294223
+  },
+  {
+   "invoice_id": "INV-2025-0110",
+   "date": "2025-03-31",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q1",
+   "amount_cents": 461619
+  },
+  {
+   "invoice_id": "INV-2025-0111",
+   "date": "2025-03-31",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q1",
+   "amount_cents": 940637
+  },
+  {
+   "invoice_id": "INV-2025-0112",
+   "date": "2025-04-01",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q2",
+   "amount_cents": 76880
+  },
+  {
+   "invoice_id": "INV-2025-0113",
+   "date": "2025-04-01",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 642308
+  },
+  {
+   "invoice_id": "INV-2025-0114",
+   "date": "2025-04-02",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q2",
+   "amount_cents": 232286
+  },
+  {
+   "invoice_id": "INV-2025-0115",
+   "date": "2025-04-03",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 275527
+  },
+  {
+   "invoice_id": "INV-2025-0116",
+   "date": "2025-04-03",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 301143
+  },
+  {
+   "invoice_id": "INV-2025-0117",
+   "date": "2025-04-04",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q2",
+   "amount_cents": 136241
+  },
+  {
+   "invoice_id": "INV-2025-0118",
+   "date": "2025-04-06",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 60090
+  },
+  {
+   "invoice_id": "INV-2025-0119",
+   "date": "2025-04-09",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 81873
+  },
+  {
+   "invoice_id": "INV-2025-0120",
+   "date": "2025-04-10",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 37499
+  },
+  {
+   "invoice_id": "INV-2025-0121",
+   "date": "2025-04-11",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 138949
+  },
+  {
+   "invoice_id": "INV-2025-0122",
+   "date": "2025-04-11",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 59762
+  },
+  {
+   "invoice_id": "INV-2025-0123",
+   "date": "2025-04-13",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q2",
+   "amount_cents": 717417
+  },
+  {
+   "invoice_id": "INV-2025-0124",
+   "date": "2025-04-13",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 434824
+  },
+  {
+   "invoice_id": "INV-2025-0125",
+   "date": "2025-04-15",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q2",
+   "amount_cents": 388262
+  },
+  {
+   "invoice_id": "INV-2025-0126",
+   "date": "2025-04-16",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q2",
+   "amount_cents": 268635
+  },
+  {
+   "invoice_id": "INV-2025-0127",
+   "date": "2025-04-17",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q2",
+   "amount_cents": 587372
+  },
+  {
+   "invoice_id": "INV-2025-0128",
+   "date": "2025-04-18",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 232938
+  },
+  {
+   "invoice_id": "INV-2025-0129",
+   "date": "2025-04-19",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 83995
+  },
+  {
+   "invoice_id": "INV-2025-0130",
+   "date": "2025-04-20",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 61217
+  },
+  {
+   "invoice_id": "INV-2025-0131",
+   "date": "2025-04-20",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 263111
+  },
+  {
+   "invoice_id": "INV-2025-0132",
+   "date": "2025-04-21",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 90662
+  },
+  {
+   "invoice_id": "INV-2025-0133",
+   "date": "2025-04-21",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 130341
+  },
+  {
+   "invoice_id": "INV-2025-0134",
+   "date": "2025-04-22",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q2",
+   "amount_cents": 585567
+  },
+  {
+   "invoice_id": "INV-2025-0135",
+   "date": "2025-04-22",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q2",
+   "amount_cents": 378164
+  },
+  {
+   "invoice_id": "INV-2025-0136",
+   "date": "2025-04-23",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q2",
+   "amount_cents": 344694
+  },
+  {
+   "invoice_id": "INV-2025-0137",
+   "date": "2025-04-23",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q2",
+   "amount_cents": 491741
+  },
+  {
+   "invoice_id": "INV-2025-0138",
+   "date": "2025-04-24",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 240248
+  },
+  {
+   "invoice_id": "INV-2025-0139",
+   "date": "2025-04-25",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 164409
+  },
+  {
+   "invoice_id": "INV-2025-0140",
+   "date": "2025-04-26",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q2",
+   "amount_cents": 1714301
+  },
+  {
+   "invoice_id": "INV-2025-0141",
+   "date": "2025-04-27",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 36588
+  },
+  {
+   "invoice_id": "INV-2025-0142",
+   "date": "2025-04-27",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 156063
+  },
+  {
+   "invoice_id": "INV-2025-0143",
+   "date": "2025-04-27",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 324435
+  },
+  {
+   "invoice_id": "INV-2025-0144",
+   "date": "2025-04-28",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 31259
+  },
+  {
+   "invoice_id": "INV-2025-0145",
+   "date": "2025-04-30",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 63747
+  },
+  {
+   "invoice_id": "INV-2025-0146",
+   "date": "2025-04-30",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q2",
+   "amount_cents": 289505
+  },
+  {
+   "invoice_id": "INV-2025-0147",
+   "date": "2025-05-01",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 25354
+  },
+  {
+   "invoice_id": "INV-2025-0148",
+   "date": "2025-05-02",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q2",
+   "amount_cents": 268502
+  },
+  {
+   "invoice_id": "INV-2025-0149",
+   "date": "2025-05-03",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 50986
+  },
+  {
+   "invoice_id": "INV-2025-0150",
+   "date": "2025-05-03",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 59970
+  },
+  {
+   "invoice_id": "INV-2025-0151",
+   "date": "2025-05-04",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q2",
+   "amount_cents": 183647
+  },
+  {
+   "invoice_id": "INV-2025-0152",
+   "date": "2025-05-04",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 72099
+  },
+  {
+   "invoice_id": "INV-2025-0153",
+   "date": "2025-05-06",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q2",
+   "amount_cents": 299709
+  },
+  {
+   "invoice_id": "INV-2025-0154",
+   "date": "2025-05-06",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 1743598
+  },
+  {
+   "invoice_id": "INV-2025-0155",
+   "date": "2025-05-07",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 224080
+  },
+  {
+   "invoice_id": "INV-2025-0156",
+   "date": "2025-05-07",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 280530
+  },
+  {
+   "invoice_id": "INV-2025-0157",
+   "date": "2025-05-07",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q2",
+   "amount_cents": 533217
+  },
+  {
+   "invoice_id": "INV-2025-0158",
+   "date": "2025-05-08",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q2",
+   "amount_cents": 133476
+  },
+  {
+   "invoice_id": "INV-2025-0159",
+   "date": "2025-05-08",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 58218
+  },
+  {
+   "invoice_id": "INV-2025-0160",
+   "date": "2025-05-08",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 1130553
+  },
+  {
+   "invoice_id": "INV-2025-0161",
+   "date": "2025-05-09",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 72294
+  },
+  {
+   "invoice_id": "INV-2025-0162",
+   "date": "2025-05-11",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 854204
+  },
+  {
+   "invoice_id": "INV-2025-0163",
+   "date": "2025-05-12",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 21939
+  },
+  {
+   "invoice_id": "INV-2025-0164",
+   "date": "2025-05-14",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q2",
+   "amount_cents": 195052
+  },
+  {
+   "invoice_id": "INV-2025-0165",
+   "date": "2025-05-15",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q2",
+   "amount_cents": 252036
+  },
+  {
+   "invoice_id": "INV-2025-0166",
+   "date": "2025-05-15",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q2",
+   "amount_cents": 783598
+  },
+  {
+   "invoice_id": "INV-2025-0167",
+   "date": "2025-05-16",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 45308
+  },
+  {
+   "invoice_id": "INV-2025-0168",
+   "date": "2025-05-17",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 66073
+  },
+  {
+   "invoice_id": "INV-2025-0169",
+   "date": "2025-05-17",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q2",
+   "amount_cents": 114171
+  },
+  {
+   "invoice_id": "INV-2025-0170",
+   "date": "2025-05-20",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 73228
+  },
+  {
+   "invoice_id": "INV-2025-0171",
+   "date": "2025-05-20",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 214300
+  },
+  {
+   "invoice_id": "INV-2025-0172",
+   "date": "2025-05-20",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 380358
+  },
+  {
+   "invoice_id": "INV-2025-0173",
+   "date": "2025-05-21",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 75042
+  },
+  {
+   "invoice_id": "INV-2025-0174",
+   "date": "2025-05-23",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 306240
+  },
+  {
+   "invoice_id": "INV-2025-0175",
+   "date": "2025-05-23",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 391422
+  },
+  {
+   "invoice_id": "INV-2025-0176",
+   "date": "2025-05-26",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 106421
+  },
+  {
+   "invoice_id": "INV-2025-0177",
+   "date": "2025-05-27",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 30860
+  },
+  {
+   "invoice_id": "INV-2025-0178",
+   "date": "2025-05-27",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q2",
+   "amount_cents": 91159
+  },
+  {
+   "invoice_id": "INV-2025-0179",
+   "date": "2025-05-27",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 64827
+  },
+  {
+   "invoice_id": "INV-2025-0180",
+   "date": "2025-05-28",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 154990
+  },
+  {
+   "invoice_id": "INV-2025-0181",
+   "date": "2025-05-28",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 305053
+  },
+  {
+   "invoice_id": "INV-2025-0182",
+   "date": "2025-05-29",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q2",
+   "amount_cents": 268619
+  },
+  {
+   "invoice_id": "INV-2025-0183",
+   "date": "2025-05-31",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 19190
+  },
+  {
+   "invoice_id": "INV-2025-0184",
+   "date": "2025-06-01",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 38331
+  },
+  {
+   "invoice_id": "INV-2025-0185",
+   "date": "2025-06-01",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 428748
+  },
+  {
+   "invoice_id": "INV-2025-0186",
+   "date": "2025-06-02",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 428376
+  },
+  {
+   "invoice_id": "INV-2025-0187",
+   "date": "2025-06-03",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 568681
+  },
+  {
+   "invoice_id": "INV-2025-0188",
+   "date": "2025-06-03",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q2",
+   "amount_cents": 510190
+  },
+  {
+   "invoice_id": "INV-2025-0189",
+   "date": "2025-06-03",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q2",
+   "amount_cents": 742511
+  },
+  {
+   "invoice_id": "INV-2025-0190",
+   "date": "2025-06-03",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 53847
+  },
+  {
+   "invoice_id": "INV-2025-0191",
+   "date": "2025-06-03",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 375753
+  },
+  {
+   "invoice_id": "INV-2025-0192",
+   "date": "2025-06-04",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 143977
+  },
+  {
+   "invoice_id": "INV-2025-0193",
+   "date": "2025-06-04",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 274412
+  },
+  {
+   "invoice_id": "INV-2025-0194",
+   "date": "2025-06-04",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 826722
+  },
+  {
+   "invoice_id": "INV-2025-0195",
+   "date": "2025-06-05",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q2",
+   "amount_cents": 202766
+  },
+  {
+   "invoice_id": "INV-2025-0196",
+   "date": "2025-06-05",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 250220
+  },
+  {
+   "invoice_id": "INV-2025-0197",
+   "date": "2025-06-07",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 170078
+  },
+  {
+   "invoice_id": "INV-2025-0198",
+   "date": "2025-06-07",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q2",
+   "amount_cents": 64728
+  },
+  {
+   "invoice_id": "INV-2025-0199",
+   "date": "2025-06-07",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q2",
+   "amount_cents": 118034
+  },
+  {
+   "invoice_id": "INV-2025-0200",
+   "date": "2025-06-07",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 692872
+  },
+  {
+   "invoice_id": "INV-2025-0201",
+   "date": "2025-06-08",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 30653
+  },
+  {
+   "invoice_id": "INV-2025-0202",
+   "date": "2025-06-08",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 140251
+  },
+  {
+   "invoice_id": "INV-2025-0203",
+   "date": "2025-06-10",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 220476
+  },
+  {
+   "invoice_id": "INV-2025-0204",
+   "date": "2025-06-11",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 110972
+  },
+  {
+   "invoice_id": "INV-2025-0205",
+   "date": "2025-06-13",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 529758
+  },
+  {
+   "invoice_id": "INV-2025-0206",
+   "date": "2025-06-14",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 273881
+  },
+  {
+   "invoice_id": "INV-2025-0207",
+   "date": "2025-06-14",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 96766
+  },
+  {
+   "invoice_id": "INV-2025-0208",
+   "date": "2025-06-14",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q2",
+   "amount_cents": 446790
+  },
+  {
+   "invoice_id": "INV-2025-0209",
+   "date": "2025-06-14",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 25758
+  },
+  {
+   "invoice_id": "INV-2025-0210",
+   "date": "2025-06-14",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 146378
+  },
+  {
+   "invoice_id": "INV-2025-0211",
+   "date": "2025-06-14",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 469501
+  },
+  {
+   "invoice_id": "INV-2025-0212",
+   "date": "2025-06-16",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q2",
+   "amount_cents": 30742
+  },
+  {
+   "invoice_id": "INV-2025-0213",
+   "date": "2025-06-17",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q2",
+   "amount_cents": 159294
+  },
+  {
+   "invoice_id": "INV-2025-0214",
+   "date": "2025-06-19",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q2",
+   "amount_cents": 233860
+  },
+  {
+   "invoice_id": "INV-2025-0215",
+   "date": "2025-06-19",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q2",
+   "amount_cents": 86062
+  },
+  {
+   "invoice_id": "INV-2025-0216",
+   "date": "2025-06-19",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q2",
+   "amount_cents": 164080
+  },
+  {
+   "invoice_id": "INV-2025-0217",
+   "date": "2025-06-20",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 178707
+  },
+  {
+   "invoice_id": "INV-2025-0218",
+   "date": "2025-06-22",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q2",
+   "amount_cents": 272955
+  },
+  {
+   "invoice_id": "INV-2025-0219",
+   "date": "2025-06-22",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 371835
+  },
+  {
+   "invoice_id": "INV-2025-0220",
+   "date": "2025-06-23",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 589553
+  },
+  {
+   "invoice_id": "INV-2025-0221",
+   "date": "2025-06-24",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q2",
+   "amount_cents": 209166
+  },
+  {
+   "invoice_id": "INV-2025-0222",
+   "date": "2025-06-26",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q2",
+   "amount_cents": 23102
+  },
+  {
+   "invoice_id": "INV-2025-0223",
+   "date": "2025-06-26",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 235828
+  },
+  {
+   "invoice_id": "INV-2025-0224",
+   "date": "2025-06-26",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 371406
+  },
+  {
+   "invoice_id": "INV-2025-0225",
+   "date": "2025-06-26",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q2",
+   "amount_cents": 1162717
+  },
+  {
+   "invoice_id": "INV-2025-0226",
+   "date": "2025-06-28",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q2",
+   "amount_cents": 293674
+  },
+  {
+   "invoice_id": "INV-2025-0227",
+   "date": "2025-06-29",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q2",
+   "amount_cents": 99972
+  },
+  {
+   "invoice_id": "INV-2025-0228",
+   "date": "2025-06-30",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q2",
+   "amount_cents": 183088
+  },
+  {
+   "invoice_id": "INV-2025-0229",
+   "date": "2025-07-01",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 31270
+  },
+  {
+   "invoice_id": "INV-2025-0230",
+   "date": "2025-07-01",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q3",
+   "amount_cents": 95071
+  },
+  {
+   "invoice_id": "INV-2025-0231",
+   "date": "2025-07-01",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q3",
+   "amount_cents": 141890
+  },
+  {
+   "invoice_id": "INV-2025-0232",
+   "date": "2025-07-02",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 757559
+  },
+  {
+   "invoice_id": "INV-2025-0233",
+   "date": "2025-07-03",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 33933
+  },
+  {
+   "invoice_id": "INV-2025-0234",
+   "date": "2025-07-04",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q3",
+   "amount_cents": 218523
+  },
+  {
+   "invoice_id": "INV-2025-0235",
+   "date": "2025-07-04",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 271030
+  },
+  {
+   "invoice_id": "INV-2025-0236",
+   "date": "2025-07-04",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 527658
+  },
+  {
+   "invoice_id": "INV-2025-0237",
+   "date": "2025-07-05",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q3",
+   "amount_cents": 1195673
+  },
+  {
+   "invoice_id": "INV-2025-0238",
+   "date": "2025-07-05",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 57611
+  },
+  {
+   "invoice_id": "INV-2025-0239",
+   "date": "2025-07-05",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q3",
+   "amount_cents": 148439
+  },
+  {
+   "invoice_id": "INV-2025-0240",
+   "date": "2025-07-05",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q3",
+   "amount_cents": 194191
+  },
+  {
+   "invoice_id": "INV-2025-0241",
+   "date": "2025-07-06",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q3",
+   "amount_cents": 33770
+  },
+  {
+   "invoice_id": "INV-2025-0242",
+   "date": "2025-07-08",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q3",
+   "amount_cents": 81033
+  },
+  {
+   "invoice_id": "INV-2025-0243",
+   "date": "2025-07-08",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q3",
+   "amount_cents": 292686
+  },
+  {
+   "invoice_id": "INV-2025-0244",
+   "date": "2025-07-09",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 27834
+  },
+  {
+   "invoice_id": "INV-2025-0245",
+   "date": "2025-07-09",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 49306
+  },
+  {
+   "invoice_id": "INV-2025-0246",
+   "date": "2025-07-09",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 99735
+  },
+  {
+   "invoice_id": "INV-2025-0247",
+   "date": "2025-07-09",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 113133
+  },
+  {
+   "invoice_id": "INV-2025-0248",
+   "date": "2025-07-10",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 47656
+  },
+  {
+   "invoice_id": "INV-2025-0249",
+   "date": "2025-07-11",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 68557
+  },
+  {
+   "invoice_id": "INV-2025-0250",
+   "date": "2025-07-11",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 619946
+  },
+  {
+   "invoice_id": "INV-2025-0251",
+   "date": "2025-07-12",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q3",
+   "amount_cents": 375807
+  },
+  {
+   "invoice_id": "INV-2025-0252",
+   "date": "2025-07-12",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q3",
+   "amount_cents": 85228
+  },
+  {
+   "invoice_id": "INV-2025-0253",
+   "date": "2025-07-12",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q3",
+   "amount_cents": 120869
+  },
+  {
+   "invoice_id": "INV-2025-0254",
+   "date": "2025-07-14",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 176565
+  },
+  {
+   "invoice_id": "INV-2025-0255",
+   "date": "2025-07-14",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 292182
+  },
+  {
+   "invoice_id": "INV-2025-0256",
+   "date": "2025-07-16",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 16334
+  },
+  {
+   "invoice_id": "INV-2025-0257",
+   "date": "2025-07-18",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 105361
+  },
+  {
+   "invoice_id": "INV-2025-0258",
+   "date": "2025-07-19",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 154404
+  },
+  {
+   "invoice_id": "INV-2025-0259",
+   "date": "2025-07-22",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 13699
+  },
+  {
+   "invoice_id": "INV-2025-0260",
+   "date": "2025-07-22",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 67473
+  },
+  {
+   "invoice_id": "INV-2025-0261",
+   "date": "2025-07-22",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q3",
+   "amount_cents": 331549
+  },
+  {
+   "invoice_id": "INV-2025-0262",
+   "date": "2025-07-23",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 890781
+  },
+  {
+   "invoice_id": "INV-2025-0263",
+   "date": "2025-07-23",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 35299
+  },
+  {
+   "invoice_id": "INV-2025-0264",
+   "date": "2025-07-23",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 429272
+  },
+  {
+   "invoice_id": "INV-2025-0265",
+   "date": "2025-07-24",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 248224
+  },
+  {
+   "invoice_id": "INV-2025-0266",
+   "date": "2025-07-26",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 566826
+  },
+  {
+   "invoice_id": "INV-2025-0267",
+   "date": "2025-07-26",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 673944
+  },
+  {
+   "invoice_id": "INV-2025-0268",
+   "date": "2025-07-27",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q3",
+   "amount_cents": 472468
+  },
+  {
+   "invoice_id": "INV-2025-0269",
+   "date": "2025-07-27",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 665115
+  },
+  {
+   "invoice_id": "INV-2025-0270",
+   "date": "2025-07-28",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 92769
+  },
+  {
+   "invoice_id": "INV-2025-0271",
+   "date": "2025-07-28",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 180909
+  },
+  {
+   "invoice_id": "INV-2025-0272",
+   "date": "2025-07-29",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 277581
+  },
+  {
+   "invoice_id": "INV-2025-0273",
+   "date": "2025-07-30",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q3",
+   "amount_cents": 698012
+  },
+  {
+   "invoice_id": "INV-2025-0274",
+   "date": "2025-07-30",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q3",
+   "amount_cents": 79418
+  },
+  {
+   "invoice_id": "INV-2025-0275",
+   "date": "2025-07-30",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q3",
+   "amount_cents": 120531
+  },
+  {
+   "invoice_id": "INV-2025-0276",
+   "date": "2025-07-30",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 158357
+  },
+  {
+   "invoice_id": "INV-2025-0277",
+   "date": "2025-08-01",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 22086
+  },
+  {
+   "invoice_id": "INV-2025-0278",
+   "date": "2025-08-01",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 18789
+  },
+  {
+   "invoice_id": "INV-2025-0279",
+   "date": "2025-08-02",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 358098
+  },
+  {
+   "invoice_id": "INV-2025-0280",
+   "date": "2025-08-03",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q3",
+   "amount_cents": 286391
+  },
+  {
+   "invoice_id": "INV-2025-0281",
+   "date": "2025-08-04",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 387615
+  },
+  {
+   "invoice_id": "INV-2025-0282",
+   "date": "2025-08-05",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 135023
+  },
+  {
+   "invoice_id": "INV-2025-0283",
+   "date": "2025-08-06",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 75084
+  },
+  {
+   "invoice_id": "INV-2025-0284",
+   "date": "2025-08-08",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 97922
+  },
+  {
+   "invoice_id": "INV-2025-0285",
+   "date": "2025-08-09",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q3",
+   "amount_cents": 57512
+  },
+  {
+   "invoice_id": "INV-2025-0286",
+   "date": "2025-08-09",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 430776
+  },
+  {
+   "invoice_id": "INV-2025-0287",
+   "date": "2025-08-10",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 122486
+  },
+  {
+   "invoice_id": "INV-2025-0288",
+   "date": "2025-08-10",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 721336
+  },
+  {
+   "invoice_id": "INV-2025-0289",
+   "date": "2025-08-14",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 42791
+  },
+  {
+   "invoice_id": "INV-2025-0290",
+   "date": "2025-08-15",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 40320
+  },
+  {
+   "invoice_id": "INV-2025-0291",
+   "date": "2025-08-16",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 557786
+  },
+  {
+   "invoice_id": "INV-2025-0292",
+   "date": "2025-08-16",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 1253475
+  },
+  {
+   "invoice_id": "INV-2025-0293",
+   "date": "2025-08-17",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q3",
+   "amount_cents": 213083
+  },
+  {
+   "invoice_id": "INV-2025-0294",
+   "date": "2025-08-17",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q3",
+   "amount_cents": 425965
+  },
+  {
+   "invoice_id": "INV-2025-0295",
+   "date": "2025-08-18",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 1588717
+  },
+  {
+   "invoice_id": "INV-2025-0296",
+   "date": "2025-08-19",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 71551
+  },
+  {
+   "invoice_id": "INV-2025-0297",
+   "date": "2025-08-19",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 989738
+  },
+  {
+   "invoice_id": "INV-2025-0298",
+   "date": "2025-08-21",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 551572
+  },
+  {
+   "invoice_id": "INV-2025-0299",
+   "date": "2025-08-22",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 270408
+  },
+  {
+   "invoice_id": "INV-2025-0300",
+   "date": "2025-08-22",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 286615
+  },
+  {
+   "invoice_id": "INV-2025-0301",
+   "date": "2025-08-23",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 34969
+  },
+  {
+   "invoice_id": "INV-2025-0302",
+   "date": "2025-08-23",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q3",
+   "amount_cents": 349878
+  },
+  {
+   "invoice_id": "INV-2025-0303",
+   "date": "2025-08-24",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 216752
+  },
+  {
+   "invoice_id": "INV-2025-0304",
+   "date": "2025-08-25",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 1309618
+  },
+  {
+   "invoice_id": "INV-2025-0305",
+   "date": "2025-08-26",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 171888
+  },
+  {
+   "invoice_id": "INV-2025-0306",
+   "date": "2025-08-26",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 1222719
+  },
+  {
+   "invoice_id": "INV-2025-0307",
+   "date": "2025-08-26",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 122913
+  },
+  {
+   "invoice_id": "INV-2025-0308",
+   "date": "2025-08-27",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 58319
+  },
+  {
+   "invoice_id": "INV-2025-0309",
+   "date": "2025-08-27",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q3",
+   "amount_cents": 208898
+  },
+  {
+   "invoice_id": "INV-2025-0310",
+   "date": "2025-08-27",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 366494
+  },
+  {
+   "invoice_id": "INV-2025-0311",
+   "date": "2025-08-27",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 633263
+  },
+  {
+   "invoice_id": "INV-2025-0312",
+   "date": "2025-08-30",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 55784
+  },
+  {
+   "invoice_id": "INV-2025-0313",
+   "date": "2025-08-30",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q3",
+   "amount_cents": 118396
+  },
+  {
+   "invoice_id": "INV-2025-0314",
+   "date": "2025-08-30",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 153392
+  },
+  {
+   "invoice_id": "INV-2025-0315",
+   "date": "2025-09-01",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 116852
+  },
+  {
+   "invoice_id": "INV-2025-0316",
+   "date": "2025-09-02",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 142349
+  },
+  {
+   "invoice_id": "INV-2025-0317",
+   "date": "2025-09-03",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q3",
+   "amount_cents": 109937
+  },
+  {
+   "invoice_id": "INV-2025-0318",
+   "date": "2025-09-03",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 232035
+  },
+  {
+   "invoice_id": "INV-2025-0319",
+   "date": "2025-09-03",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 555373
+  },
+  {
+   "invoice_id": "INV-2025-0320",
+   "date": "2025-09-03",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 687636
+  },
+  {
+   "invoice_id": "INV-2025-0321",
+   "date": "2025-09-04",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q3",
+   "amount_cents": 654312
+  },
+  {
+   "invoice_id": "INV-2025-0322",
+   "date": "2025-09-05",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 65862
+  },
+  {
+   "invoice_id": "INV-2025-0323",
+   "date": "2025-09-06",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 75578
+  },
+  {
+   "invoice_id": "INV-2025-0324",
+   "date": "2025-09-06",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 589616
+  },
+  {
+   "invoice_id": "INV-2025-0325",
+   "date": "2025-09-07",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 1056194
+  },
+  {
+   "invoice_id": "INV-2025-0326",
+   "date": "2025-09-08",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q3",
+   "amount_cents": 92056
+  },
+  {
+   "invoice_id": "INV-2025-0327",
+   "date": "2025-09-08",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 331206
+  },
+  {
+   "invoice_id": "INV-2025-0328",
+   "date": "2025-09-08",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 692572
+  },
+  {
+   "invoice_id": "INV-2025-0329",
+   "date": "2025-09-09",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q3",
+   "amount_cents": 121827
+  },
+  {
+   "invoice_id": "INV-2025-0330",
+   "date": "2025-09-12",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q3",
+   "amount_cents": 238818
+  },
+  {
+   "invoice_id": "INV-2025-0331",
+   "date": "2025-09-13",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q3",
+   "amount_cents": 814948
+  },
+  {
+   "invoice_id": "INV-2025-0332",
+   "date": "2025-09-17",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 38881
+  },
+  {
+   "invoice_id": "INV-2025-0333",
+   "date": "2025-09-17",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 271859
+  },
+  {
+   "invoice_id": "INV-2025-0334",
+   "date": "2025-09-17",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q3",
+   "amount_cents": 181066
+  },
+  {
+   "invoice_id": "INV-2025-0335",
+   "date": "2025-09-18",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 157058
+  },
+  {
+   "invoice_id": "INV-2025-0336",
+   "date": "2025-09-20",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q3",
+   "amount_cents": 99628
+  },
+  {
+   "invoice_id": "INV-2025-0337",
+   "date": "2025-09-20",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 41164
+  },
+  {
+   "invoice_id": "INV-2025-0338",
+   "date": "2025-09-21",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q3",
+   "amount_cents": 385937
+  },
+  {
+   "invoice_id": "INV-2025-0339",
+   "date": "2025-09-21",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q3",
+   "amount_cents": 135761
+  },
+  {
+   "invoice_id": "INV-2025-0340",
+   "date": "2025-09-23",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 94402
+  },
+  {
+   "invoice_id": "INV-2025-0341",
+   "date": "2025-09-23",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q3",
+   "amount_cents": 236514
+  },
+  {
+   "invoice_id": "INV-2025-0342",
+   "date": "2025-09-25",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q3",
+   "amount_cents": 145622
+  },
+  {
+   "invoice_id": "INV-2025-0343",
+   "date": "2025-09-25",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q3",
+   "amount_cents": 456306
+  },
+  {
+   "invoice_id": "INV-2025-0344",
+   "date": "2025-09-27",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q3",
+   "amount_cents": 53083
+  },
+  {
+   "invoice_id": "INV-2025-0345",
+   "date": "2025-09-27",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q3",
+   "amount_cents": 295397
+  },
+  {
+   "invoice_id": "INV-2025-0346",
+   "date": "2025-09-28",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q3",
+   "amount_cents": 70988
+  },
+  {
+   "invoice_id": "INV-2025-0347",
+   "date": "2025-09-28",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q3",
+   "amount_cents": 361799
+  },
+  {
+   "invoice_id": "INV-2025-0348",
+   "date": "2025-09-28",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q3",
+   "amount_cents": 638736
+  },
+  {
+   "invoice_id": "INV-2025-0349",
+   "date": "2025-09-30",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q3",
+   "amount_cents": 60005
+  },
+  {
+   "invoice_id": "INV-2025-0350",
+   "date": "2025-10-01",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 101901
+  },
+  {
+   "invoice_id": "INV-2025-0351",
+   "date": "2025-10-02",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 25641
+  },
+  {
+   "invoice_id": "INV-2025-0352",
+   "date": "2025-10-02",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 284959
+  },
+  {
+   "invoice_id": "INV-2025-0353",
+   "date": "2025-10-02",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 1237773
+  },
+  {
+   "invoice_id": "INV-2025-0354",
+   "date": "2025-10-02",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 156314
+  },
+  {
+   "invoice_id": "INV-2025-0355",
+   "date": "2025-10-02",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 229903
+  },
+  {
+   "invoice_id": "INV-2025-0356",
+   "date": "2025-10-02",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 594215
+  },
+  {
+   "invoice_id": "INV-2025-0357",
+   "date": "2025-10-03",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 23986
+  },
+  {
+   "invoice_id": "INV-2025-0358",
+   "date": "2025-10-03",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q4",
+   "amount_cents": 568035
+  },
+  {
+   "invoice_id": "INV-2025-0359",
+   "date": "2025-10-04",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 34031
+  },
+  {
+   "invoice_id": "INV-2025-0360",
+   "date": "2025-10-04",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q4",
+   "amount_cents": 315164
+  },
+  {
+   "invoice_id": "INV-2025-0361",
+   "date": "2025-10-05",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q4",
+   "amount_cents": 575359
+  },
+  {
+   "invoice_id": "INV-2025-0362",
+   "date": "2025-10-06",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 681999
+  },
+  {
+   "invoice_id": "INV-2025-0363",
+   "date": "2025-10-09",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 128061
+  },
+  {
+   "invoice_id": "INV-2025-0364",
+   "date": "2025-10-09",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 409028
+  },
+  {
+   "invoice_id": "INV-2025-0365",
+   "date": "2025-10-10",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q4",
+   "amount_cents": 293742
+  },
+  {
+   "invoice_id": "INV-2025-0366",
+   "date": "2025-10-10",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 156482
+  },
+  {
+   "invoice_id": "INV-2025-0367",
+   "date": "2025-10-10",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 657703
+  },
+  {
+   "invoice_id": "INV-2025-0368",
+   "date": "2025-10-10",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q4",
+   "amount_cents": 177174
+  },
+  {
+   "invoice_id": "INV-2025-0369",
+   "date": "2025-10-11",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 32463
+  },
+  {
+   "invoice_id": "INV-2025-0370",
+   "date": "2025-10-11",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q4",
+   "amount_cents": 1040256
+  },
+  {
+   "invoice_id": "INV-2025-0371",
+   "date": "2025-10-11",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 68384
+  },
+  {
+   "invoice_id": "INV-2025-0372",
+   "date": "2025-10-12",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q4",
+   "amount_cents": 239103
+  },
+  {
+   "invoice_id": "INV-2025-0373",
+   "date": "2025-10-12",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 161584
+  },
+  {
+   "invoice_id": "INV-2025-0374",
+   "date": "2025-10-12",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 413515
+  },
+  {
+   "invoice_id": "INV-2025-0375",
+   "date": "2025-10-13",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 65526
+  },
+  {
+   "invoice_id": "INV-2025-0376",
+   "date": "2025-10-13",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 125683
+  },
+  {
+   "invoice_id": "INV-2025-0377",
+   "date": "2025-10-13",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 203282
+  },
+  {
+   "invoice_id": "INV-2025-0378",
+   "date": "2025-10-14",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 727913
+  },
+  {
+   "invoice_id": "INV-2025-0379",
+   "date": "2025-10-15",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 29680
+  },
+  {
+   "invoice_id": "INV-2025-0380",
+   "date": "2025-10-15",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 894435
+  },
+  {
+   "invoice_id": "INV-2025-0381",
+   "date": "2025-10-16",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 72466
+  },
+  {
+   "invoice_id": "INV-2025-0382",
+   "date": "2025-10-16",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 63715
+  },
+  {
+   "invoice_id": "INV-2025-0383",
+   "date": "2025-10-16",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 264335
+  },
+  {
+   "invoice_id": "INV-2025-0384",
+   "date": "2025-10-17",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 135796
+  },
+  {
+   "invoice_id": "INV-2025-0385",
+   "date": "2025-10-17",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 760069
+  },
+  {
+   "invoice_id": "INV-2025-0386",
+   "date": "2025-10-17",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q4",
+   "amount_cents": 270825
+  },
+  {
+   "invoice_id": "INV-2025-0387",
+   "date": "2025-10-18",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 1088848
+  },
+  {
+   "invoice_id": "INV-2025-0388",
+   "date": "2025-10-18",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q4",
+   "amount_cents": 839482
+  },
+  {
+   "invoice_id": "INV-2025-0389",
+   "date": "2025-10-18",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 75458
+  },
+  {
+   "invoice_id": "INV-2025-0390",
+   "date": "2025-10-19",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 591252
+  },
+  {
+   "invoice_id": "INV-2025-0391",
+   "date": "2025-10-19",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 1015566
+  },
+  {
+   "invoice_id": "INV-2025-0392",
+   "date": "2025-10-20",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q4",
+   "amount_cents": 402058
+  },
+  {
+   "invoice_id": "INV-2025-0393",
+   "date": "2025-10-20",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q4",
+   "amount_cents": 197937
+  },
+  {
+   "invoice_id": "INV-2025-0394",
+   "date": "2025-10-22",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 33864
+  },
+  {
+   "invoice_id": "INV-2025-0395",
+   "date": "2025-10-24",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 23832
+  },
+  {
+   "invoice_id": "INV-2025-0396",
+   "date": "2025-10-24",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 56882
+  },
+  {
+   "invoice_id": "INV-2025-0397",
+   "date": "2025-10-24",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 156088
+  },
+  {
+   "invoice_id": "INV-2025-0398",
+   "date": "2025-10-24",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 215867
+  },
+  {
+   "invoice_id": "INV-2025-0399",
+   "date": "2025-10-24",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 365265
+  },
+  {
+   "invoice_id": "INV-2025-0400",
+   "date": "2025-10-25",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 530761
+  },
+  {
+   "invoice_id": "INV-2025-0401",
+   "date": "2025-10-26",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 96356
+  },
+  {
+   "invoice_id": "INV-2025-0402",
+   "date": "2025-10-26",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 273551
+  },
+  {
+   "invoice_id": "INV-2025-0403",
+   "date": "2025-10-27",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 153058
+  },
+  {
+   "invoice_id": "INV-2025-0404",
+   "date": "2025-10-27",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 34294
+  },
+  {
+   "invoice_id": "INV-2025-0405",
+   "date": "2025-10-27",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 582850
+  },
+  {
+   "invoice_id": "INV-2025-0406",
+   "date": "2025-10-28",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 72705
+  },
+  {
+   "invoice_id": "INV-2025-0407",
+   "date": "2025-10-28",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 120255
+  },
+  {
+   "invoice_id": "INV-2025-0408",
+   "date": "2025-10-29",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 241166
+  },
+  {
+   "invoice_id": "INV-2025-0409",
+   "date": "2025-10-29",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 463574
+  },
+  {
+   "invoice_id": "INV-2025-0410",
+   "date": "2025-10-30",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 55379
+  },
+  {
+   "invoice_id": "INV-2025-0411",
+   "date": "2025-10-31",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 76920
+  },
+  {
+   "invoice_id": "INV-2025-0412",
+   "date": "2025-10-31",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q4",
+   "amount_cents": 80178
+  },
+  {
+   "invoice_id": "INV-2025-0413",
+   "date": "2025-11-02",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 511005
+  },
+  {
+   "invoice_id": "INV-2025-0414",
+   "date": "2025-11-02",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 61652
+  },
+  {
+   "invoice_id": "INV-2025-0415",
+   "date": "2025-11-02",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 737937
+  },
+  {
+   "invoice_id": "INV-2025-0416",
+   "date": "2025-11-03",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 160265
+  },
+  {
+   "invoice_id": "INV-2025-0417",
+   "date": "2025-11-03",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 994121
+  },
+  {
+   "invoice_id": "INV-2025-0418",
+   "date": "2025-11-05",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q4",
+   "amount_cents": 424024
+  },
+  {
+   "invoice_id": "INV-2025-0419",
+   "date": "2025-11-06",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 29261
+  },
+  {
+   "invoice_id": "INV-2025-0420",
+   "date": "2025-11-06",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q4",
+   "amount_cents": 317251
+  },
+  {
+   "invoice_id": "INV-2025-0421",
+   "date": "2025-11-06",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 24834
+  },
+  {
+   "invoice_id": "INV-2025-0422",
+   "date": "2025-11-07",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 656843
+  },
+  {
+   "invoice_id": "INV-2025-0423",
+   "date": "2025-11-09",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 53544
+  },
+  {
+   "invoice_id": "INV-2025-0424",
+   "date": "2025-11-10",
+   "supplier": "Castellano Servizi S.r.l.",
+   "quarter": "Q4",
+   "amount_cents": 119028
+  },
+  {
+   "invoice_id": "INV-2025-0425",
+   "date": "2025-11-11",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 39700
+  },
+  {
+   "invoice_id": "INV-2025-0426",
+   "date": "2025-11-11",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 180910
+  },
+  {
+   "invoice_id": "INV-2025-0427",
+   "date": "2025-11-12",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 110213
+  },
+  {
+   "invoice_id": "INV-2025-0428",
+   "date": "2025-11-12",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q4",
+   "amount_cents": 58533
+  },
+  {
+   "invoice_id": "INV-2025-0429",
+   "date": "2025-11-13",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q4",
+   "amount_cents": 163984
+  },
+  {
+   "invoice_id": "INV-2025-0430",
+   "date": "2025-11-14",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 50961
+  },
+  {
+   "invoice_id": "INV-2025-0431",
+   "date": "2025-11-15",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 85850
+  },
+  {
+   "invoice_id": "INV-2025-0432",
+   "date": "2025-11-16",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 37798
+  },
+  {
+   "invoice_id": "INV-2025-0433",
+   "date": "2025-11-16",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 170193
+  },
+  {
+   "invoice_id": "INV-2025-0434",
+   "date": "2025-11-18",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 54952
+  },
+  {
+   "invoice_id": "INV-2025-0435",
+   "date": "2025-11-18",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 204420
+  },
+  {
+   "invoice_id": "INV-2025-0436",
+   "date": "2025-11-18",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 281900
+  },
+  {
+   "invoice_id": "INV-2025-0437",
+   "date": "2025-11-20",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 23251
+  },
+  {
+   "invoice_id": "INV-2025-0438",
+   "date": "2025-11-20",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 52220
+  },
+  {
+   "invoice_id": "INV-2025-0439",
+   "date": "2025-11-21",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 238120
+  },
+  {
+   "invoice_id": "INV-2025-0440",
+   "date": "2025-11-21",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 21403
+  },
+  {
+   "invoice_id": "INV-2025-0441",
+   "date": "2025-11-21",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 55731
+  },
+  {
+   "invoice_id": "INV-2025-0442",
+   "date": "2025-11-22",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 88673
+  },
+  {
+   "invoice_id": "INV-2025-0443",
+   "date": "2025-11-22",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 87537
+  },
+  {
+   "invoice_id": "INV-2025-0444",
+   "date": "2025-11-22",
+   "supplier": "Rheintal Facility Services GmbH",
+   "quarter": "Q4",
+   "amount_cents": 210851
+  },
+  {
+   "invoice_id": "INV-2025-0445",
+   "date": "2025-11-23",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 74135
+  },
+  {
+   "invoice_id": "INV-2025-0446",
+   "date": "2025-11-24",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 150655
+  },
+  {
+   "invoice_id": "INV-2025-0447",
+   "date": "2025-11-24",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 45408
+  },
+  {
+   "invoice_id": "INV-2025-0448",
+   "date": "2025-11-25",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 213605
+  },
+  {
+   "invoice_id": "INV-2025-0449",
+   "date": "2025-11-27",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 172382
+  },
+  {
+   "invoice_id": "INV-2025-0450",
+   "date": "2025-11-29",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 100033
+  },
+  {
+   "invoice_id": "INV-2025-0451",
+   "date": "2025-11-29",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 157226
+  },
+  {
+   "invoice_id": "INV-2025-0452",
+   "date": "2025-11-30",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 581193
+  },
+  {
+   "invoice_id": "INV-2025-0453",
+   "date": "2025-12-01",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 39158
+  },
+  {
+   "invoice_id": "INV-2025-0454",
+   "date": "2025-12-02",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 626295
+  },
+  {
+   "invoice_id": "INV-2025-0455",
+   "date": "2025-12-03",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q4",
+   "amount_cents": 447902
+  },
+  {
+   "invoice_id": "INV-2025-0456",
+   "date": "2025-12-03",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 62686
+  },
+  {
+   "invoice_id": "INV-2025-0457",
+   "date": "2025-12-03",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q4",
+   "amount_cents": 161397
+  },
+  {
+   "invoice_id": "INV-2025-0458",
+   "date": "2025-12-04",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 44486
+  },
+  {
+   "invoice_id": "INV-2025-0459",
+   "date": "2025-12-04",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 46712
+  },
+  {
+   "invoice_id": "INV-2025-0460",
+   "date": "2025-12-04",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 146229
+  },
+  {
+   "invoice_id": "INV-2025-0461",
+   "date": "2025-12-05",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 73027
+  },
+  {
+   "invoice_id": "INV-2025-0462",
+   "date": "2025-12-06",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 43550
+  },
+  {
+   "invoice_id": "INV-2025-0463",
+   "date": "2025-12-06",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 93294
+  },
+  {
+   "invoice_id": "INV-2025-0464",
+   "date": "2025-12-06",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 1546728
+  },
+  {
+   "invoice_id": "INV-2025-0465",
+   "date": "2025-12-09",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 235308
+  },
+  {
+   "invoice_id": "INV-2025-0466",
+   "date": "2025-12-09",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 294914
+  },
+  {
+   "invoice_id": "INV-2025-0467",
+   "date": "2025-12-09",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 17823
+  },
+  {
+   "invoice_id": "INV-2025-0468",
+   "date": "2025-12-09",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 32304
+  },
+  {
+   "invoice_id": "INV-2025-0469",
+   "date": "2025-12-09",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q4",
+   "amount_cents": 211437
+  },
+  {
+   "invoice_id": "INV-2025-0470",
+   "date": "2025-12-10",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 900324
+  },
+  {
+   "invoice_id": "INV-2025-0471",
+   "date": "2025-12-10",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 901458
+  },
+  {
+   "invoice_id": "INV-2025-0472",
+   "date": "2025-12-11",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 199553
+  },
+  {
+   "invoice_id": "INV-2025-0473",
+   "date": "2025-12-11",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 245471
+  },
+  {
+   "invoice_id": "INV-2025-0474",
+   "date": "2025-12-11",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 198319
+  },
+  {
+   "invoice_id": "INV-2025-0475",
+   "date": "2025-12-12",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 241624
+  },
+  {
+   "invoice_id": "INV-2025-0476",
+   "date": "2025-12-12",
+   "supplier": "Kessler Industriebedarf KG",
+   "quarter": "Q4",
+   "amount_cents": 1054495
+  },
+  {
+   "invoice_id": "INV-2025-0477",
+   "date": "2025-12-14",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 39000
+  },
+  {
+   "invoice_id": "INV-2025-0478",
+   "date": "2025-12-14",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 1945064
+  },
+  {
+   "invoice_id": "INV-2025-0479",
+   "date": "2025-12-15",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 135333
+  },
+  {
+   "invoice_id": "INV-2025-0480",
+   "date": "2025-12-15",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 230858
+  },
+  {
+   "invoice_id": "INV-2025-0481",
+   "date": "2025-12-15",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 1087873
+  },
+  {
+   "invoice_id": "INV-2025-0482",
+   "date": "2025-12-16",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 257317
+  },
+  {
+   "invoice_id": "INV-2025-0483",
+   "date": "2025-12-17",
+   "supplier": "Hansekontor Office Supplies GmbH",
+   "quarter": "Q4",
+   "amount_cents": 693553
+  },
+  {
+   "invoice_id": "INV-2025-0484",
+   "date": "2025-12-18",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q4",
+   "amount_cents": 780756
+  },
+  {
+   "invoice_id": "INV-2025-0485",
+   "date": "2025-12-19",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q4",
+   "amount_cents": 239405
+  },
+  {
+   "invoice_id": "INV-2025-0486",
+   "date": "2025-12-19",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q4",
+   "amount_cents": 534654
+  },
+  {
+   "invoice_id": "INV-2025-0487",
+   "date": "2025-12-20",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 67939
+  },
+  {
+   "invoice_id": "INV-2025-0488",
+   "date": "2025-12-22",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 97417
+  },
+  {
+   "invoice_id": "INV-2025-0489",
+   "date": "2025-12-23",
+   "supplier": "Lindqvist Datasystem AB",
+   "quarter": "Q4",
+   "amount_cents": 37499
+  },
+  {
+   "invoice_id": "INV-2025-0490",
+   "date": "2025-12-23",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 247623
+  },
+  {
+   "invoice_id": "INV-2025-0491",
+   "date": "2025-12-23",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 561241
+  },
+  {
+   "invoice_id": "INV-2025-0492",
+   "date": "2025-12-24",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 177346
+  },
+  {
+   "invoice_id": "INV-2025-0493",
+   "date": "2025-12-25",
+   "supplier": "Brandt Werkzeugbau GmbH",
+   "quarter": "Q4",
+   "amount_cents": 36580
+  },
+  {
+   "invoice_id": "INV-2025-0494",
+   "date": "2025-12-27",
+   "supplier": "Falkenried IT-Beratung GmbH",
+   "quarter": "Q4",
+   "amount_cents": 273027
+  },
+  {
+   "invoice_id": "INV-2025-0495",
+   "date": "2025-12-27",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 393075
+  },
+  {
+   "invoice_id": "INV-2025-0496",
+   "date": "2025-12-27",
+   "supplier": "Weidmann Maschinenbau GmbH & Co. KG",
+   "quarter": "Q4",
+   "amount_cents": 647462
+  },
+  {
+   "invoice_id": "INV-2025-0497",
+   "date": "2025-12-28",
+   "supplier": "Alpenblick Elektrotechnik AG",
+   "quarter": "Q4",
+   "amount_cents": 41791
+  },
+  {
+   "invoice_id": "INV-2025-0498",
+   "date": "2025-12-28",
+   "supplier": "Moreau Fournitures SARL",
+   "quarter": "Q4",
+   "amount_cents": 75659
+  },
+  {
+   "invoice_id": "INV-2025-0499",
+   "date": "2025-12-30",
+   "supplier": "Van Dijk Verpakkingen B.V.",
+   "quarter": "Q4",
+   "amount_cents": 717652
+  },
+  {
+   "invoice_id": "INV-2025-0500",
+   "date": "2025-12-31",
+   "supplier": "Nordhafen Logistik GmbH",
+   "quarter": "Q4",
+   "amount_cents": 247073
+  }
+ ]
+}
