@@ -15,9 +15,9 @@ The price of a language-model token has fallen by orders of magnitude (the infer
 
 Discussions of AI cost usually quote price per token. For anyone paying the bill, the relevant quantity is
 
-$$
+```math
 \text{cost} \;=\; \underbrace{\text{price per token}}_{\text{falling}} \;\times\; \underbrace{\text{tokens per task}}_{\text{this report}} \;\times\; \underbrace{\text{tasks}}_{\text{growing}} .
-$$
+```
 
 When the first factor falls, the other two can grow faster, a pattern first described for coal by Jevons [2]. Two recent developments increase tokens per task in particular. *Reasoning* models generate a hidden chain of thought before answering [3, 4]. *Agents* call tools in a loop and re-send their growing context at every step [5, 6]. Reasoning is increasingly on by default, and agent frameworks loop by design.
 
@@ -80,15 +80,15 @@ All checks passed for all four models. Weights (Hugging Face repo @ revision): `
 
 ### 3.4 Metrics
 
-For item $i$ with calls $j = 1,\dots,J_i$:
+For item $`i`$ with calls $`j = 1,\dots,J_i`$, and $`N_\text{correct}`$ the number of correctly answered items:
 
-$$
+```math
 \text{tokens}_i = \sum_{j=1}^{J_i} \big(\text{prompt}_{ij} + \text{completion}_{ij}\big),
 \qquad
-\text{tokens per correct item} = \frac{\sum_i \text{tokens}_i}{\#\text{correct}} .
-$$
+\text{tokens per correct item} = \frac{\sum_i \text{tokens}_i}{N_\text{correct}} .
+```
 
-Reasoning tokens are part of completion tokens. They are counted with the served model's tokenizer when the server does not report them. Prompt tokens are summed over all calls because a stateless API bills the full context on every call. Replies that hit the token limit count as failures. *Tokens per correct item* is the price-independent cost of one successful task. With prices $p_\text{in}, p_\text{out}$ it becomes cost per successful task, $\sum_i(p_\text{in}\,\text{prompt}_i + p_\text{out}\,\text{completion}_i)/\#\text{correct}$ (`analysis/cost.py`).
+Reasoning tokens are part of completion tokens. They are counted with the served model's tokenizer when the server does not report them. Prompt tokens are summed over all calls because a stateless API bills the full context on every call. Replies that hit the token limit count as failures. *Tokens per correct item* is the price-independent cost of one successful task. With prices $`p_\text{in}, p_\text{out}`$ it becomes cost per successful task, $`\sum_i(p_\text{in}\,\text{prompt}_i + p_\text{out}\,\text{completion}_i)/N_\text{correct}`$ (`analysis/cost.py`).
 
 ### 3.5 Statistical analysis
 
