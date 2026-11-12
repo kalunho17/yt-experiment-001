@@ -16,6 +16,7 @@ does; this repository reports price-independent token counts plus a calculator
 | gpt-oss-20b optional | run (O-low, O-high) | - |
 | Gemma 4: "a 4-bit build" | QAT W4A16 build, served as `gemma4-31b-qat-w4a16`, concurrency 4 | fits 32 GB; KV cache held only ~35k tokens |
 | vLLM ≥ 0.26 | 0.26.0 for three models; a development build (`0.1.dev19754+g3a0914114`) for Qwen3.8-27B | Qwen3.8 needed its own image |
+| Qwen3.8-27B served normally | served with `--enforce-eager` by mistake (CUDA graphs off); the single-stream speed probe was rerun on 2026-11-12 with graphs on, the other figures stand | found after publication; `CORRECTIONS.md` |
 | `openai` client, `datasets` library | standard-library HTTP client, raw dataset files | zero dependencies |
 | Agent fallback to Qwen3.6-35B-A3B if tool calling fails | not needed: Qwen3.8-27B tool calling passed the smoke checks | - |
 | Second seed on T2 | not run | - |

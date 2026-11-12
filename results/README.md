@@ -1,6 +1,8 @@
 # Results
 
 Measured on 2026-11-08 (runs 18:09–21:29 UTC): one NVIDIA GeForce RTX 5090, vLLM, request seed 42.
+Qwen3.8-27B's single-stream speed was measured again on 2026-11-12 after a serving flag was corrected
+(`../CORRECTIONS.md`); the published rows are kept under `superseded/`.
 
 | File | What |
 |---|---|
@@ -13,6 +15,8 @@ Measured on 2026-11-08 (runs 18:09–21:29 UTC): one NVIDIA GeForce RTX 5090, vL
 | `setup.md` | per served model: id, root, max length, vLLM version, GPU, request settings |
 | `smoke/<profile>/` | the 5-items-per-task smoke stage that gated each model's full run |
 | `logs/` | console output of the runs: two smoke passes, the full plan, a resume of the gpt-oss profile |
+| `superseded/speed.csv` | the three Qwen3.8-27B speed rows as published (eager mode), replaced on 2026-11-12 |
+| `corrections/2026-11-12-qwen38-cudagraphs/` | the spot check after the fix: Q-off on T1 (items, calls, GPU log, setup) |
 
 ## `items.csv`
 

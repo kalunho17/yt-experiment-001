@@ -5,7 +5,7 @@
                           [--reasoning-field reasoning_content|reasoning]
                           [--truncate-every N] [--no-tokenize] [--always-think]
 
-Endpoints: GET /v1/models, GET /version, POST /tokenize, POST /v1/chat/completions.
+Endpoints: GET /v1/models, GET /version, POST /tokenize, POST /v1/chat/completions (also streamed).
 Answers are plausible, not smart: T1 picks a label from the prompt, T2 answers a number,
 T3 calls list_suppliers, get_invoices and calculator before answering. Thinking is "on"
 unless chat_template_kwargs.enable_thinking is false, and then a reasoning text comes back.
@@ -86,6 +86,29 @@ class Handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(data)
 
+    def _stream(self, k: int, msg: dict, finish: str, prompt_tokens: int, completion: int):
+        """SSE stream like vLLM: delta chunks, a finish chunk, then usage (stream_options.include_usage)."""
+        self.send_response(200)
+        self.send_header("Content-Type", "text/event-stream")
+        self.end_headers()
+
+        def chunk(obj):
+            self.wfile.write(b"data: " + json.dumps(obj).encode() + b"\n\n")
+            self.wfile.flush()
+
+        base = {"id": f"chatcmpl-{k}", "object": "chat.completion.chunk", "created": int(time.time()),
+                "model": ARGS.model}
+        if msg.get(ARGS.reasoning_field):
+            chunk({**base, "choices": [{"index": 0, "delta": {ARGS.reasoning_field: msg[ARGS.reasoning_field]}}]})
+        for i, w in enumerate((msg.get("content") or "").split(" ")):
+            time.sleep(0.005)
+            chunk({**base, "choices": [{"index": 0, "delta": {"content": w if i == 0 else " " + w}}]})
+        chunk({**base, "choices": [{"index": 0, "delta": {}, "finish_reason": finish}]})
+        chunk({**base, "choices": [], "usage": {"prompt_tokens": prompt_tokens, "completion_tokens": completion,
+                                                 "total_tokens": prompt_tokens + completion}})
+        self.wfile.write(b"data: [DONE]\n\n")
+        self.wfile.flush()
+
     def do_GET(self):
         if self.path.rstrip("/") == "/v1/models":
             return self._send(200, {"object": "list", "data": [
@@ -134,6 +157,8 @@ class Handler(BaseHTTPRequestHandler):
         msg = {"role": "assistant", "content": content or None, "tool_calls": r.get("tool_calls") or []}
         if reasoning is not None:
             msg[ARGS.reasoning_field] = reasoning
+        if body.get("stream"):
+            return self._stream(k, msg, finish, prompt_tokens, completion)
         self._send(200, {
             "id": f"chatcmpl-{k}", "object": "chat.completion", "created": int(time.time()), "model": ARGS.model,
             "choices": [{"index": 0, "message": msg, "finish_reason": finish}],

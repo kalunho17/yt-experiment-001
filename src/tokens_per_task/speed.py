@@ -12,7 +12,7 @@ from pathlib import Path
 from .client import NO_PROXY_OPENER, Server
 from .common import now_iso
 from .config import CONFIGS, DEFAULT_SEED, request_settings
-from .results_io import SPEED_FIELDS, CsvAppender, read_rows
+from .results_io import SPEED_FIELDS, CsvAppender, read_rows, write_rows
 
 SPEED_RUNS = 3
 SPEED_MAX_TOKENS = 800
@@ -69,15 +69,36 @@ def stream_once(server: Server, model: str, cfg: dict) -> dict:
             "end_to_end_tok_s": round(comp / (t_end - t0), 1) if comp else "", "finish_reason": finish}
 
 
-def speed_probe(server: Server, model: str, profile: str, results: Path):
-    """SPEED_RUNS streamed requests into results/speed.csv; skipped if already recorded."""
+def supersede_speed(results: Path, model: str) -> int:
+    """Move the model's rows from speed.csv to superseded/speed.csv (kept, never deleted).
+    Returns how many rows moved."""
+    path = results / "speed.csv"
+    rows = read_rows(path)
+    old = [r for r in rows if r.get("model") == model]
+    if not old:
+        return 0
+    out = CsvAppender(results / "superseded" / "speed.csv", SPEED_FIELDS)
+    try:
+        out.write(old)
+    finally:
+        out.close()
+    write_rows(path, SPEED_FIELDS, [r for r in rows if r.get("model") != model])
+    return len(old)
+
+
+def speed_probe(server: Server, model: str, profile: str, results: Path, replace: bool = False):
+    """SPEED_RUNS streamed requests into results/speed.csv; skipped if already recorded.
+    ``replace`` moves earlier rows of the model to results/superseded/speed.csv first."""
     cfg_name = SPEED_CONFIG.get(profile)
     if not cfg_name:
         return
     path = results / "speed.csv"
     done = [r for r in read_rows(path) if r.get("model") == model]
-    if len(done) >= SPEED_RUNS:
-        print(f"  speed probe for {model} already recorded ({len(done)} runs)")
+    if done and replace:
+        n = supersede_speed(results, model)
+        print(f"  {n} earlier speed row(s) of {model} moved to {results / 'superseded' / 'speed.csv'}")
+    elif len(done) >= SPEED_RUNS:
+        print(f"  speed probe for {model} already recorded ({len(done)} runs); use --replace to measure again")
         return
     out = CsvAppender(path, SPEED_FIELDS)
     print(f"  speed probe ({cfg_name}, concurrency 1, {SPEED_RUNS} streamed runs):")

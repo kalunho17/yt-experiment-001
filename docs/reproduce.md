@@ -41,7 +41,7 @@ vllm serve openai/gpt-oss-20b --served-model-name gpt-oss-20b \
   --max-model-len 32768 --gpu-memory-utilization 0.90
 ```
 
-The exact `vllm serve` flags of the published runs were not recorded. What was recorded (served ids, model roots, repo revisions, vLLM versions, request settings) is in `results/setup.md`.
+The exact `vllm serve` flags of the published runs were not recorded. What was recorded (served ids, model roots, repo revisions, vLLM versions, request settings) is in `results/setup.md`. One flag is known because it was wrong: Qwen3.8-27B ran with `--enforce-eager` (CUDA graphs off), which held it to 20 tokens/s single stream. With `--max-cudagraph-capture-size 64 --max-num-seqs 64` instead, the same build reaches 67 (`CORRECTIONS.md`). On a 32 GB card, do not capture graphs for the default batch sizes up to 512: that is what runs out of memory and what the eager-mode advice was for.
 
 ## 2. Smoke test, then the full run
 
@@ -70,6 +70,14 @@ The CHECK lines tell you if a condition's reasoning switch does not reach the ch
 | `--seed N` | request seed; the item sample is always seed 42. Seeds are kept apart in the results. |
 | `--task T1,T2` | a subset of tasks |
 | `--any-model` | skip the served-model check |
+
+Only the single-stream speed probe (3 streamed requests, one at a time) of a served model:
+
+```bash
+python run.py speed --profile text-qwen35-4b --base-url http://localhost:8000/v1 [--replace] [--summarise]
+```
+
+`--replace` measures a model again: its earlier rows move to `results/superseded/speed.csv` and are never deleted. The profile names are those of `PROFILES` in `config.py` (`text` = Qwen3.8-27B).
 
 ## 3. Optional: the orchestrated plan
 

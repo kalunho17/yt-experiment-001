@@ -173,8 +173,13 @@ def main():
     L += ["## Throughput during the runs", "",
           "Per-request tok/s = completion tokens ÷ request latency (prefill and queueing included). "
           "Aggregate tok/s = all completion tokens of a condition × task ÷ its wall time. Concurrency 8 "
-          "(4 for Gemma 4). Short outputs (T1) make per-request rates prefill-bound.", "",
-          "| Model | Setting | Task | tok/s per request (median) | aggregate tok/s |", "|---|---|---|--:|--:|"]
+          "(4 for Gemma 4). Short outputs (T1) make per-request rates prefill-bound.", ""]
+    superseded = read_speed(res / "superseded" / "speed.csv")
+    if superseded:
+        L += ["**Correction (2026-11-12):** the Qwen3.8-27B rows were measured with CUDA graphs disabled "
+              "(`--enforce-eager`, by mistake) and are roughly 3× too slow; they are left as measured. "
+              "Token counts are unaffected. See `CORRECTIONS.md`.", ""]
+    L += ["| Model | Setting | Task | tok/s per request (median) | aggregate tok/s |", "|---|---|---|--:|--:|"]
     for c in ORDER:
         for t in ["T1", "T2", "T4", "T3"]:
             sp = speed_run.get((c, t))
@@ -188,6 +193,15 @@ def main():
         L.append(f"| `{s['model']}` | {s['config']} | {fmt(s['ttft_s'], 2)} | {fmt(s['decode_tok_s'], 1)} | "
                  f"{fmt(s['completion_tokens'])} |")
     L.append("")
+    if superseded:
+        L += ["Superseded rows, kept as published (`results/superseded/speed.csv`; the cause and the rerun are "
+              "in `CORRECTIONS.md`):", "",
+              "| Served model | Condition | Time to first token (s) | Decode tok/s | Output tokens | Superseded on |",
+              "|---|---|--:|--:|--:|---|"]
+        for s in superseded:
+            L.append(f"| `{s['model']}` | {s['config']} | {fmt(s['ttft_s'], 2)} | {fmt(s['decode_tok_s'], 1)} | "
+                     f"{fmt(s['completion_tokens'])} | 2026-11-12 |")
+        L.append("")
 
     # ---------------------------------------------------------------- GPU
     g = [x for x in read_rows(res / "gpu.csv") if x["config"]]

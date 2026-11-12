@@ -3,6 +3,8 @@
 **Kalun Ho**
 Technical report · November 2026 · Code, data and raw logs: this repository
 
+> **Correction (12 November 2026).** Qwen3.8-27B was served with `--enforce-eager`, which disables CUDA graphs, by mistake. Its single-stream decode speed was published as 20 tok/s; measured again with the flag fixed (same build, same checkpoint) it is 67 tok/s, and the spread between the fastest and the slowest model is about ×4, not ×14. §3.3, §4.4, §6 and §7 are corrected below; the in-run throughput, latency and wall-time figures of the Qwen3.8-27B conditions in `results/RESULTS.md` were measured in eager mode and are left as measured, marked. Token counts, accuracy, every multiplier and every confidence interval are unaffected, and a 100-item spot check agrees (73% vs 71% on Banking77, identical token count). The published rows are kept in `results/superseded/`; see `CORRECTIONS.md`.
+
 ---
 
 ## Abstract
@@ -70,7 +72,7 @@ Qwen3.8-27B is the main subject because one set of weights offers four reasoning
 
 ### 3.3 Serving
 
-All runs used one NVIDIA GeForce RTX 5090 (32 GB) and vLLM [16] (0.26.0; a development build for Qwen3.8-27B), one model at a time. Reasoning was returned in a separate channel by the server's reasoning parser. Tool calls used native function calling. Requests ran with concurrency 8 (4 for Gemma 4, whose KV cache held about 35k tokens). Before the full runs, a smoke stage of 5 items per condition checked automatically that:
+All runs used one NVIDIA GeForce RTX 5090 (32 GB) and vLLM [16] (0.26.0; a development build for Qwen3.8-27B), one model at a time. Qwen3.8-27B was served with `--enforce-eager` by mistake, which disables CUDA graphs and held its decode speed to about a third of what the same build reaches with graphs captured up to batch size 64 (`--max-cudagraph-capture-size 64 --max-num-seqs 64`); this affects its throughput, latency and wall-time figures, not its token counts or accuracy (see the correction above and `CORRECTIONS.md`). Reasoning was returned in a separate channel by the server's reasoning parser. Tool calls used native function calling. Requests ran with concurrency 8 (4 for Gemma 4, whose KV cache held about 35k tokens). Before the full runs, a smoke stage of 5 items per condition checked automatically that:
 
 - reasoning appears exactly when it should;
 - reasoning never leaks into the answer text;
@@ -143,7 +145,7 @@ With identical weights and settings, the agentic lookup task used **5,613 tokens
 
 ### 4.4 Throughput
 
-Throughput depends on quantisation and serving flags more than on model size. Single-stream decode on the RTX 5090 reached 287 tok/s for gpt-oss-20b (MXFP4), 157 for Qwen3.5-4B (BF16), 71 for Gemma 4 31B (W4A16) and 20 for Qwen3.8-27B (NVFP4) (`results/RESULTS.md`). The token multipliers above therefore also translate into latency: at 20 tok/s on the 27B model, a few thousand reasoning tokens add minutes per item.
+Throughput depends on quantisation and serving flags more than on model size. Single-stream decode on the RTX 5090 reached 287 tok/s for gpt-oss-20b (MXFP4), 157 for Qwen3.5-4B (BF16), 71 for Gemma 4 31B (W4A16) and 67 for Qwen3.8-27B (NVFP4; corrected on 12 November 2026 from the published 20, which was measured with CUDA graphs disabled, see `CORRECTIONS.md`) (`results/RESULTS.md`). The spread between the fastest and the slowest model is about ×4. The token multipliers above therefore also translate into latency: at 67 tok/s on the 27B model, a few thousand reasoning tokens add about a minute per item, and the 20 tok/s of the mis-served build made it minutes. The serving flag alone moved this model's speed by ×3.3, which is itself the point: on your own hardware, throughput is as much a configuration result as a model property.
 
 ## 5 Discussion
 
@@ -164,13 +166,13 @@ Throughput depends on quantisation and serving flags more than on model size. Si
 - **Open models only.** Token counts are for these four open-weight models and their quantised builds. Proprietary models tokenise and reason differently. The *multipliers* are the transferable result, not absolute counts. Pricing these counts at a commercial model's list price is a projection.
 - **Scope and sample size.** Three benchmark families and one synthetic agent task stand in for business workloads, with 100/100/50/20 items. One sample per item and one request seed, so sampling variance across seeds is not captured. Ceiling effects (T2, T3) limit what accuracy differences can show.
 - **Contamination.** GSM8K and MATH have been public since 2021 and are likely in training data. This may inflate accuracy, and possibly reduce the tokens needed, for all conditions alike.
-- **Serving specifics.** Results depend on chat templates, reasoning parsers, quantisation and vLLM version. The Qwen3.8 effort levels act as prompt instructions, not hard budgets. Model revisions come from the GPU host's model registry and were not re-hashed against the files on disk. The exact `vllm serve` flags and driver/CUDA versions were not recorded.
+- **Serving specifics.** Results depend on chat templates, reasoning parsers, quantisation and vLLM version. The Qwen3.8 effort levels act as prompt instructions, not hard budgets. Model revisions come from the GPU host's model registry and were not re-hashed against the files on disk. The exact `vllm serve` flags and driver/CUDA versions were not recorded, and one of them mattered: Qwen3.8-27B ran with `--enforce-eager`, which cost it two thirds of its decode speed (corrected in §4.4; its in-run throughput and latency figures are left as measured).
 - **Agent design.** A single agent loop with native tool calls and compact JSON tool outputs. Multi-agent systems, longer horizons and larger tool outputs would raise the multiplier further. Tool errors and retries were rare here.
 - **No energy figure.** GPU power draw was not available from the host's telemetry.
 
 ## 7 Reproducibility and compute
 
-All code (Python ≥ 3.11, standard library only), the exact benchmark files used (with SHA-256 and licence notices, `data/raw/THIRD_PARTY_NOTICES.md`), the generated ledger, every per-call and per-item record, the raw run logs and the analysis scripts are in this repository. The full runs took 3.3 hours of wall-clock time on one RTX 5090 and processed 4.06M tokens (0.90M prompt, 3.16M completion) over 2,642 calls. A test suite checks four things: the published results contain exactly the seeded item samples, every item's totals equal the sum of its calls, `summary.json` recomputes exactly from `items.csv`, and the full pipeline runs end to end against mock servers. The original design, written before the runs, and its deviations are in `docs/preregistration.md`. See `docs/reproduce.md` for step-by-step instructions.
+All code (Python ≥ 3.11, standard library only), the exact benchmark files used (with SHA-256 and licence notices, `data/raw/THIRD_PARTY_NOTICES.md`), the generated ledger, every per-call and per-item record, the raw run logs and the analysis scripts are in this repository. The full runs took 3.3 hours of wall-clock time on one RTX 5090 (with Qwen3.8-27B at its eager-mode speed, see §3.3) and processed 4.06M tokens (0.90M prompt, 3.16M completion) over 2,642 calls. A test suite checks four things: the published results contain exactly the seeded item samples, every item's totals equal the sum of its calls, `summary.json` recomputes exactly from `items.csv`, and the full pipeline runs end to end against mock servers. The original design, written before the runs, and its deviations are in `docs/preregistration.md`. See `docs/reproduce.md` for step-by-step instructions.
 
 ## References
 

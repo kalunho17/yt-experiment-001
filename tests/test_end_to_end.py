@@ -66,6 +66,24 @@ def test_run_single_answer_and_agent(mock_vllm, tmp_path):
     assert "0 to run" in r2.stdout and len(read_rows(tmp_path / "items.csv")) == len(items)
 
 
+def test_speed_probe_alone_and_replace(mock_vllm, tmp_path):
+    r = harness("speed", "--profile", "text", "--base-url", mock_vllm, "--results-dir", str(tmp_path))
+    assert r.returncode == 0, r.stdout + r.stderr
+    rows = read_rows(tmp_path / "speed.csv")
+    assert len(rows) == 3 and {x["config"] for x in rows} == {"Q-off"}
+    assert all(float(x["decode_tok_s"]) > 0 and x["finish_reason"] == "stop" for x in rows)
+    assert "Served model id(s): qwen3.8-27b-nvfp4" in (tmp_path / "setup.md").read_text(encoding="utf-8")
+    # without --replace nothing is measured again
+    r2 = harness("speed", "--profile", "text", "--base-url", mock_vllm, "--results-dir", str(tmp_path))
+    assert "already recorded" in r2.stdout and len(read_rows(tmp_path / "speed.csv")) == 3
+    # with --replace the earlier rows are kept under superseded/ and three new ones are written
+    r3 = harness("speed", "--profile", "text", "--base-url", mock_vllm, "--results-dir", str(tmp_path), "--replace")
+    assert r3.returncode == 0, r3.stdout + r3.stderr
+    assert len(read_rows(tmp_path / "speed.csv")) == 3
+    old = read_rows(tmp_path / "superseded" / "speed.csv")
+    assert [x["timestamp"] for x in old] == [x["timestamp"] for x in rows]
+
+
 def test_wrong_model_is_refused(mock_vllm, tmp_path):
     r = harness("run", "--config", "G-off", "--smoke", "1", "--base-url", mock_vllm, "--results-dir", str(tmp_path))
     assert r.returncode != 0 and "expects a model matching" in r.stderr

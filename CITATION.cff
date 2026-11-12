@@ -5,8 +5,8 @@ type: software
 authors:
   - family-names: Ho
     given-names: Kalun
-version: 1.0.0
-date-released: 2026-11-08
+version: 1.0.1
+date-released: 2026-11-12
 license: MIT
 repository-code: "https://github.com/kalunho17/yt-experiment-001"
 keywords:

@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-08T21:29:18+00:00",
+  "generated": "2026-11-12T11:26:33+00:00",
   "source": "items.csv",
-  "harness": "run.py (ep-001 tokens per task)",
+  "harness": "tokens_per_task",
   "notes": [
     "total tokens = prompt + completion tokens summed over all calls of an item",
     "reasoning tokens are part of completion tokens",
@@ -1070,16 +1070,6 @@
   ],
   "speed_single_stream": [
     {
-      "model": "qwen3.8-27b-nvfp4",
-      "profile": "text",
-      "config": "Q-off",
-      "runs": 3,
-      "ttft_s": 0.16,
-      "decode_tok_s": 20.27,
-      "end_to_end_tok_s": 20.2,
-      "completion_tokens": 545.0
-    },
-    {
       "model": "qwen3.5-4b",
       "profile": "text-qwen35-4b",
       "config": "S",
@@ -1108,6 +1098,16 @@
       "decode_tok_s": 286.57,
       "end_to_end_tok_s": 280.63,
       "completion_tokens": 649.33
+    },
+    {
+      "model": "qwen3.8-27b-nvfp4",
+      "profile": "text",
+      "config": "Q-off",
+      "runs": 3,
+      "ttft_s": 0.06,
+      "decode_tok_s": 67.23,
+      "end_to_end_tok_s": 66.83,
+      "completion_tokens": 550.0
     }
   ]
 }

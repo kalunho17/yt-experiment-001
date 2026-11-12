@@ -53,6 +53,15 @@ class CsvAppender:
         self.f.close()
 
 
+def write_rows(path: Path, fields: list[str], rows: list[dict]):
+    """Rewrite a CSV file in full (used when rows are moved, never for appending)."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
+        w.writeheader()
+        w.writerows(rows)
+
+
 def read_rows(path: Path) -> list[dict]:
     if not path.exists():
         return []

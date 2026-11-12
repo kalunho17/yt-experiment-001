@@ -5,6 +5,7 @@
     python run.py run --config Q-off,Q-low --task T1,T2   # against a vLLM you serve yourself
     python run.py summarise                               # results/summary.json from items.csv
     python run.py plan [--smoke-only]                     # whole experiment via a GPU-host conductor
+    python run.py speed --profile text [--replace]        # only the single-stream speed probe of one model
 
 See docs/reproduce.md for the full procedure.
 """
@@ -29,7 +30,7 @@ from .prompts import t1_prompt
 from .results_io import CALL_FIELDS, ITEM_FIELDS, CsvAppender, LayoutError, read_rows
 from .runner import RequestContext, run_batch
 from .scoring import parse_number, score_numeric
-from .speed import speed_probe
+from .speed import SPEED_CONFIG, speed_probe
 from .summary import print_summary, sanity_warnings, summarise_rows, write_summary
 
 # Windows consoles may not print every character of the datasets; never crash on that.
@@ -274,6 +275,33 @@ def cmd_plan(args):
         print("\nPLAN FINISHED.")
 
 
+def cmd_speed(args):
+    """Only the single-stream speed probe of one served model (3 streamed runs, one at a time)."""
+    profile = args.profile
+    if profile not in SPEED_CONFIG:
+        die(f"unknown profile {profile}. Known: {', '.join(SPEED_CONFIG)}")
+    configs = [SPEED_CONFIG[profile]]
+    results = results_dir(args)
+    cond = conductor_from_env(args.conductor_url, required=bool(args.activate or args.release))
+    keep = None
+    if args.activate:
+        ensure_profile(cond, profile, make_server(args), args.ready_timeout)
+        keep = Keepalive(cond)
+        keep.start()
+    try:
+        server, model = connect(configs, args)
+        record_setup(server, cond, results, args.max_tokens, args.seed, args.concurrency)
+        speed_probe(server, model, profile, results, replace=args.replace)
+    finally:
+        if keep:
+            keep.stop()
+    if args.summarise:
+        cmd_summarise(args)
+    if args.release and cond:
+        release_gpu(cond)
+    print(f"\nDone. Files in {results}")
+
+
 def cmd_summarise(args):
     try:
         write_summary(results_dir(args, smoke=bool(args.smoke)))
@@ -440,6 +468,16 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--keep-running", action="store_true", help="leave the last model up at the end")
     p.add_argument("--no-gpu-log", action="store_true", help="do not write gpu.csv")
     p.set_defaults(func=cmd_plan)
+
+    p = sub.add_parser("speed", parents=[common], help="only the single-stream speed probe of one served "
+                       "model (3 streamed runs, one request at a time) into speed.csv")
+    p.add_argument("--profile", required=True, help=f"which model: {', '.join(C.PROFILES)}")
+    p.add_argument("--replace", action="store_true", help="measure again: earlier rows of the model move to "
+                   "results/superseded/speed.csv")
+    p.add_argument("--activate", action="store_true", help="start the profile via the conductor first")
+    p.add_argument("--release", action="store_true", help="free the GPU host afterwards")
+    p.add_argument("--summarise", action="store_true", help="write summary.json afterwards")
+    p.set_defaults(func=cmd_speed)
 
     sub.add_parser("summarise", aliases=["summarize"], parents=[common],
                    help="write summary.json from items.csv").set_defaults(func=cmd_summarise)

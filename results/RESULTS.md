@@ -119,6 +119,8 @@ Mean prompt tokens per call, by step of the agent loop (the context grows as too
 
 Per-request tok/s = completion tokens ÷ request latency (prefill and queueing included). Aggregate tok/s = all completion tokens of a condition × task ÷ its wall time. Concurrency 8 (4 for Gemma 4). Short outputs (T1) make per-request rates prefill-bound.
 
+**Correction (2026-11-12):** the Qwen3.8-27B rows were measured with CUDA graphs disabled (`--enforce-eager`, by mistake) and are roughly 3× too slow; they are left as measured. Token counts are unaffected. See `CORRECTIONS.md`.
+
 | Model | Setting | Task | tok/s per request (median) | aggregate tok/s |
 |---|---|---|--:|--:|
 | Qwen3.5-4B | thinking off | T1 | 24.0 | 75.3 |
@@ -158,10 +160,16 @@ Single stream (one streamed request at a time, ~400-word answer, 3 runs):
 
 | Served model | Condition | Time to first token (s) | Decode tok/s | Output tokens |
 |---|---|--:|--:|--:|
-| `qwen3.8-27b-nvfp4` | Q-off | 0.16 | 20.3 | 545 |
 | `qwen3.5-4b` | S | 0.07 | 157.1 | 607 |
 | `gemma4-31b-qat-w4a16` | G-off | 0.05 | 71.3 | 425 |
 | `gpt-oss-20b` | O-low | 0.05 | 286.6 | 649 |
+| `qwen3.8-27b-nvfp4` | Q-off | 0.06 | 67.2 | 550 |
+
+Superseded rows, kept as published (`results/superseded/speed.csv`; the cause and the rerun are in `CORRECTIONS.md`):
+
+| Served model | Condition | Time to first token (s) | Decode tok/s | Output tokens | Superseded on |
+|---|---|--:|--:|--:|---|
+| `qwen3.8-27b-nvfp4` | Q-off | 0.16 | 20.3 | 545 | 2026-11-12 |
 
 ## GPU utilisation during the runs
 

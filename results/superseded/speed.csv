@@ -1,0 +1,4 @@
+timestamp,profile,model,config,run,prompt_tokens,completion_tokens,reasoning_chars,ttft_s,total_s,decode_tok_s,end_to_end_tok_s,finish_reason
+2026-11-08T18:08:34+00:00,text,qwen3.8-27b-nvfp4,Q-off,1,48,545,0,0.175,26.992,20.3,20.2,stop
+2026-11-08T18:09:01+00:00,text,qwen3.8-27b-nvfp4,Q-off,2,48,545,0,0.153,27.016,20.3,20.2,stop
+2026-11-08T18:09:28+00:00,text,qwen3.8-27b-nvfp4,Q-off,3,48,545,0,0.145,27.044,20.2,20.2,stop

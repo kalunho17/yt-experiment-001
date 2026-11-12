@@ -10,6 +10,11 @@ Kalun Ho · November 2026 · [Website](https://kalunho.com/experiments/tokens-pe
 > A bill is *price per token × tokens per task × tasks*. This repository measures the middle term
 > on matched tasks, changing one setting at a time, and releases every call that was made.
 
+> **Correction, 12 November 2026.** Qwen3.8-27B was served with `--enforce-eager` by mistake (CUDA
+> graphs off), so its published speed of 20 tokens/s was wrong: measured again with the flag fixed it
+> is 67, and the gap to gpt-oss-20b is about ×4, not ×14. Token counts, accuracy and all five findings
+> are unaffected. Details, the rerun and the kept original rows: [CORRECTIONS.md](CORRECTIONS.md).
+
 ![Accuracy vs tokens per item](figures/fig1_tokens_vs_accuracy.png)
 
 ## Key findings
@@ -32,6 +37,7 @@ The metric to budget is **cost per successful task**: tokens per task drive it, 
 
 ```
 ├── paper/technical_report.md      the write-up (method, results, limitations, references)
+├── CORRECTIONS.md                 errors found after publication and what was measured again
 ├── src/tokens_per_task/           the measurement harness (Python ≥ 3.11, standard library only)
 │   ├── config.py                  models, conditions, request settings: what was measured
 │   ├── prompts.py, datasets.py    tasks and the seeded item samples
@@ -41,7 +47,8 @@ The metric to budget is **cost per successful task**: tokens per task drive it, 
 │   └── cli.py                     `python run.py <command>`
 ├── analysis/                      make_report.py (tables), make_figures.py, cost.py, stats.py
 ├── data/                          benchmark files used (with SHA-256) and the generated ledger
-├── results/                       every call and item, summary, setup record, raw run logs
+├── results/                       every call and item, summary, setup record, raw run logs,
+│                                  superseded rows and the correction rerun
 ├── figures/                       PNG + PDF
 ├── docs/                          reproduce.md, preregistration.md (design written before the runs)
 └── tests/                         unit, reproducibility and end-to-end tests (mock servers, no GPU)
@@ -69,6 +76,7 @@ python analysis/cost.py --input-price 0.20 --output-price 0.80 --currency EUR
 ```bash
 vllm serve Qwen/Qwen3.5-4B --served-model-name qwen3.5-4b --max-model-len 32768 --reasoning-parser qwen3
 python run.py run --config S,S-on --base-url http://localhost:8000/v1 --summarise
+python run.py speed --profile text-qwen35-4b --base-url http://localhost:8000/v1   # only the single-stream speed probe
 ```
 
 See [docs/reproduce.md](docs/reproduce.md) for every model, the smoke test and the full plan.
@@ -82,6 +90,7 @@ See [docs/reproduce.md](docs/reproduce.md) for every model, the smoke test and t
 | [`results/summary.json`](results/summary.json) | aggregates per condition × task |
 | [`results/RESULTS.md`](results/RESULTS.md) | all tables with 95% CIs and paired contrasts |
 | [`results/setup.md`](results/setup.md) | served models, vLLM versions, GPU, request settings |
+| [`results/superseded/`](results/superseded) | rows replaced by a correction, kept as published ([CORRECTIONS.md](CORRECTIONS.md)) |
 | [`results/logs/`](results/logs) | raw console logs of the smoke and full runs |
 
 Schemas: [results/README.md](results/README.md). Data sources and licences: [data/README.md](data/README.md).
