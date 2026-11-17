@@ -45,8 +45,7 @@ The metric to budget is **cost per successful task**: tokens per task drive it, 
 │   ├── scoring.py                 exact-match scoring (no LLM judge)
 │   ├── runner.py, client.py       calls, agent loop, token accounting
 │   └── cli.py                     `python run.py <command>`
-├── analysis/                      make_report.py (tables), make_figures.py, cost.py, stats.py,
-│                                  make_calculator.py (the bill calculator on the web page)
+├── analysis/                      make_report.py (tables), make_figures.py, cost.py, stats.py
 ├── data/                          benchmark files used (with SHA-256) and the generated ledger
 ├── results/                       every call and item, summary, setup record, raw run logs,
 │                                  superseded rows and the correction rerun
